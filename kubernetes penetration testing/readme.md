@@ -6,7 +6,7 @@ Main deployments options:
 1. On-premise 
 2. Managed Cloud 
 
-Note: Security controls and attack surface will differ from deployment to deployment. 
+**Note:** Security controls and attack surface will differ from deployment to deployment. 
 
 ### Default Services and Ports:
 
@@ -44,9 +44,8 @@ Compromise the image registry and upload backdoored image clones.
 
 ### Tools
 
-[kubeaudit](https://github.com/Shopify/kubeaudit) - is a command line tool to audit Kubernetes clusters for various different security concerns: run the container as a non-root user, use a read only root filesystem, drop scary capabilities, don't add new ones, don't run privileged etc.
+* [kubeaudit](https://github.com/Shopify/kubeaudit) - is a command line tool to audit Kubernetes clusters for various different security concerns: run the container as a non-root user, use a read only root filesystem, drop scary capabilities, don't add new ones, don't run privileged etc.
 
+* [kube-bench](https://github.com/aquasecurity/kube-bench) - Checks whether Kubernetes is deployed according to security best practices as defined in the CIS Kubernetes Benchmark.
 
-[kube-bench](https://github.com/aquasecurity/kube-bench) - Checks whether Kubernetes is deployed according to security best practices as defined in the CIS Kubernetes Benchmark.
-
-[katacoda](https://katacoda.com/) - Learn Kubernetes using interactive broser-based scenarios.
+* [katacoda](https://katacoda.com/) - Learn Kubernetes using interactive broser-based scenarios.
