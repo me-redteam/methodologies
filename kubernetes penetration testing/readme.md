@@ -1,6 +1,6 @@
 # Kubernetes Penetration Testing
 
-Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications.
+> Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications.
 
 Main deployments options:
 1. On-premise 
@@ -47,6 +47,6 @@ Compromise the image registry and upload backdoored image clones.
 [kubeaudit](https://github.com/Shopify/kubeaudit) - is a command line tool to audit Kubernetes clusters for various different security concerns: run the container as a non-root user, use a read only root filesystem, drop scary capabilities, don't add new ones, don't run privileged etc.
 
 
-kube-bench 
+[kube-bench](https://github.com/aquasecurity/kube-bench) - Checks whether Kubernetes is deployed according to security best practices as defined in the CIS Kubernetes Benchmark.
 
-https://katacoda.com/
+[katacoda](https://katacoda.com/) - Learn Kubernetes using interactive broser-based scenarios.
