@@ -13,7 +13,7 @@ Note: Security controls and attack surface will differ from deployment to deploy
 #### Control-plane node(s):
 
 | Protocol      | Port Range    | Service  |
-| ------------- |:-----------------| :--------|
+| --- |:-----| :--------|
 | TCP           | 6443          | Kubernetes API Server - used by all nodes, port is customizable    |
 | TCP           | 2379-2380     | etcd server client API -  key value store     |
 | TCP           | 10250         | Kubelet API - agent that runs on each node     |
