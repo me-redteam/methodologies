@@ -4,7 +4,7 @@
 
 Main deployments options:
 1. On-premise 
-2. Managed Cloud 
+2. Managed Cloud Providers
 
 **Note:** Security controls and attack surface will differ from deployment to deployment. 
 
@@ -27,22 +27,23 @@ Main deployments options:
 | TCP           | 10250         | Kubelet API    |
 | TCP           | 30000-32767   | Default Range for NodePort Services |
 
-//Add Nmap Line
+#### Addons
 
+Kubernetes allows installation of addons. Add-ons extend the functionality of Kubernetes. These increase the attack surface and are subject to security vulnerabilities or insecure configurations. (examples: CoreDNS, Web Dashboard)
 
-External Assessment
+### Possible Assessments
 
-Internal Assessment 
+* External Network - target the internet facing assets looking for exposed Kubernetes services.
 
-Compromised Container Assessment
+* Internal Network - positioned inside the network in a DevOp trusted zone.
 
-Post-authentication
+* Compromised Container - attacking the infrastructure from a compromised container.
 
-Once you've gained root access to a master or a worker node you can perform an authenticated CIS Kubernetes compliance scan using Nessus. 
-
-Compromise the image registry and upload backdoored image clones. 
+* Compliance Scan - perform an authenticated CIS Kubernetes compliance scan using Nessus. 
 
 ### Tools
+
+* [peirates](https://github.com/inguardians/peirates) - a Kubernetes penetration tool, enables an attacker to escalate privilege and pivot through a Kubernetes cluster. It automates known techniques to steal and collect service accounts, obtain further code execution, and gain control of the cluster.
 
 * [kubeaudit](https://github.com/Shopify/kubeaudit) - is a command line tool to audit Kubernetes clusters for various different security concerns: run the container as a non-root user, use a read only root filesystem, drop scary capabilities, don't add new ones, don't run privileged etc.
 
