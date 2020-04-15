@@ -41,9 +41,17 @@ Kubernetes allows installation of addons. Add-ons extend the functionality of Ku
 
 * Compliance Scan - perform an authenticated CIS Kubernetes compliance scan using Nessus. 
 
+### Commands Cheatsheet
+
+```
+test
+```
+
 ### Tools
 
 * [peirates](https://github.com/inguardians/peirates) - a Kubernetes penetration tool, enables an attacker to escalate privilege and pivot through a Kubernetes cluster. It automates known techniques to steal and collect service accounts, obtain further code execution, and gain control of the cluster.
+
+* [kube-hunter](https://github.com/aquasecurity/kube-hunter) - hunts for security weaknesses in Kubernetes clusters.
 
 * [kubeaudit](https://github.com/Shopify/kubeaudit) - is a command line tool to audit Kubernetes clusters for various different security concerns: run the container as a non-root user, use a read only root filesystem, drop scary capabilities, don't add new ones, don't run privileged etc.
 
