@@ -106,7 +106,7 @@ etcdctl --endpoints=http://<MASTER-IP>:2379 get / --prefix --keys-only
 
 #### Authenticated External API Requests 
 
-Assuming you already obtained a token 
+Assuming you already obtained a token: 
 
 ```
 curl -v -H "Authorization: Bearer <jwt_token>" https://<master_ip>:<port>/api/
@@ -122,6 +122,17 @@ curl -v -H "Authorization: Bearer <jwt_token>" https://<master_ip:<port>/apis/ex
 
 # List daemonsets
 curl -v -H "Authorization: Bearer <jwt_token>" https://<master_ip:<port>/apis/extensions/v1beta1/namespaces/<default>/daemonsets
+```
+
+#### Service Token Grabber
+
+Every container in a pod has a generated service token mounted as a volume to be able to authenticate and make requests to the Kubernetes API.
+
+```
+#Find where the service token is mounted
+mount | grep kubernetes 
+
+ls /var/run/secrets/kubernetes.io/serviceaccount
 ```
 
 ### Tools
