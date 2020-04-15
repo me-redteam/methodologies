@@ -43,25 +43,25 @@ Kubernetes allows installation of addons. Add-ons extend the functionality of Ku
 
 ### Commands Cheatsheet
 
-## Enumerate namespaces
+#### Enumerate namespaces
 
 ```
 kubectl get ns
 ```
 
-## List pods in a namespace
+#### List pods in a namespace
 
 ```
 kubectl get pods --namespace=<namespace>
 ```
 
-## Execute commands in a pod (spawn shell)
+#### Execute commands in a pod (spawn shell)
 
 ```
 kubectl exec <pod> -i --tty --namespace=<podsnamespace> -- /bin/bash
 ```
 
-## Get services
+#### Get services
 
 ```
 kubectl get svc --all-namespaces
