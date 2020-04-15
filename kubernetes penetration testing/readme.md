@@ -27,6 +27,10 @@ Main deployments options:
 | TCP           | 10250         | Kubelet API    |
 | TCP           | 30000-32767   | Default Range for NodePort Services |
 
+### Popular non-default ports:
+
+<TO BE COMPLETED>
+
 #### Addons
 
 Kubernetes allows installation of addons. Add-ons extend the functionality of Kubernetes. These increase the attack surface and are subject to security vulnerabilities or insecure configurations. (examples: CoreDNS, Web Dashboard)
@@ -67,22 +71,37 @@ kubectl exec <pod> -i --tty --namespace=<podsnamespace> -- /bin/bash
 kubectl get svc --all-namespaces
 ```
 
-## Commands Cheatsheet
+#### Get all secrets
 
 ```
-test
+kubectl get secrets --all-namespaces
 ```
 
-## Commands Cheatsheet
+#### API discovery
 
 ```
-test
+curl -k https://<IP Address>:8080
+curl -k https://<IP Address>:(8|6)443/swaggerapi
+curl -k https://<IP Address>:(8|6)443/healthz
+curl -k https://<IP Address>:(8|6)443/api/v1
+curl -k https://<IP address>:10250
+curl -k https://<IP address>:10250/metrics
+curl -k https://<IP address>:10250/pods
 ```
 
-## Commands Cheatsheet
+#### Kubelet API (Read Only - Old Releases)
 
 ```
-test
+curl -k https://<IP Address>:10255
+curl -k http://<IP Address>:10255/pods
+```
+
+#### etcd Key Store API
+
+```
+curl -k https://<IP address>:2379
+curl -k https://<IP address>:2379/version
+etcdctl --endpoints=http://<MASTER-IP>:2379 get / --prefix --keys-only
 ```
 
 ## Commands Cheatsheet
