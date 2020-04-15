@@ -62,7 +62,7 @@ kubectl get pods --namespace=<namespace>
 #### Execute commands in a pod (spawn shell)
 
 ```
-kubectl exec <pod> -i --tty --namespace=<podsnamespace> -- /bin/bash
+kubectl exec <pod> -i --tty --namespace=<pod_namespace> -- /bin/bash
 ```
 
 #### Get services
@@ -104,10 +104,24 @@ curl -k https://<IP address>:2379/version
 etcdctl --endpoints=http://<MASTER-IP>:2379 get / --prefix --keys-only
 ```
 
-## Commands Cheatsheet
+#### Authenticated External API Requests 
+
+Assuming you already obtained a token 
 
 ```
-test
+curl -v -H "Authorization: Bearer <jwt_token>" https://<master_ip>:<port>/api/
+
+# List Pods
+curl -v -H "Authorization: Bearer <jwt_token>" https://<master_ip>:<port>/api/v1/namespaces/<default>/pods/
+
+# List secrets
+curl -v -H "Authorization: Bearer <jwt_token>" https://<master_ip>:<port>/api/v1/namespaces/<default>/secrets/
+
+# List deployments
+curl -v -H "Authorization: Bearer <jwt_token>" https://<master_ip:<port>/apis/extensions/v1beta1/namespaces/<default>/deployments
+
+# List daemonsets
+curl -v -H "Authorization: Bearer <jwt_token>" https://<master_ip:<port>/apis/extensions/v1beta1/namespaces/<default>/daemonsets
 ```
 
 ### Tools
@@ -121,3 +135,4 @@ test
 * [kube-bench](https://github.com/aquasecurity/kube-bench) - Checks whether Kubernetes is deployed according to security best practices as defined in the CIS Kubernetes Benchmark.
 
 * [katacoda](https://katacoda.com/) - Learn Kubernetes using interactive broser-based scenarios.
+
