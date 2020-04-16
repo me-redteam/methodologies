@@ -6,7 +6,6 @@
     + [Default Services and Ports:](#default-services-and-ports-)
       - [Control-plane node(s):](#control-plane-node-s--)
       - [Worker node(s):](#worker-node-s--)
-      - [Addons](#addons)
     + [Possible Assessments](#possible-assessments)
     + [Commands/Attacks Cheatsheet](#commands-attacks-cheatsheet)
       - [Enumerate namespaces](#enumerate-namespaces)
