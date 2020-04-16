@@ -30,6 +30,7 @@
       - [Sniff The Network](#sniff-the-network)
       - [Bash Script To Discover Kubernetes Services](#bash-script-to-discover-kubernetes-services)
       - [Cloud Metadata](#cloud-metadata)
+      - [Kubernetes Resource Dumping ](#kubernetes-resource-dumping )
     + [Tools](#tools)
     + [References](#references)
 
@@ -327,6 +328,12 @@ SERVER_RANGES+="10.*.0-1.* ";
 nmap-kube ${SERVER_RANGES} "${LOCAL_RANGE}"
 }
 nmap-kube-discover
+```
+
+#### Kubernetes Resource Dumping 
+
+```
+for res in $(kubectl api-resources -o name);do kubectl get $res -o yaml | tee -a k8s.dump;done
 ```
 
 #### Cloud Metadata 
