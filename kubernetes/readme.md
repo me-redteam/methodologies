@@ -105,6 +105,14 @@ kubectl get svc --all-namespaces
 kubectl get secrets --all-namespaces
 ```
 
+#### Dump Environment Variables 
+
+Kubernetes stores configuration information in environment variables.
+
+```
+printenv
+```
+
 #### API discovery
 
 ```
@@ -363,3 +371,4 @@ In most cases, the Kubernetes cluster is hosted in cloud services such as AWS, w
 * [Kubernetes Pentest Methodology Part 2](https://www.cyberark.com/threat-research-blog/kubernetes-pentest-methodology-part-2/)
 * [Kubernetes Pentest Methodology Part 3](https://www.cyberark.com/threat-research-blog/kubernetes-pentest-methodology-part-3/)
 * [Container Escape Using Kernel Exploitation](https://www.cyberark.com/threat-research-blog/the-route-to-root-container-escape-using-kernel-exploitation/)
+* [Attacking and Defending Kubernetes](https://www.inguardians.com/attacking-and-defending-kubernetes-bust-a-kube-episode-2/)
