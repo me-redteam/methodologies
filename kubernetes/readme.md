@@ -13,6 +13,7 @@
       - [Enumerate namespaces](#enumerate-namespaces)
       - [List pods in a namespace](#list-pods-in-a-namespace)
       - [Execute commands in a pod (spawn shell)](#execute-commands-in-a-pod--spawn-shell-)
+      - [Remotely execute commands in container via Kubelet API](#remotely-execute-commands-in-container-via-kubelet-api)
       - [Get services](#get-services)
       - [Get all secrets](#get-all-secrets)
       - [API discovery](#api-discovery)
