@@ -36,7 +36,7 @@
     + [References](#references)
 
 ### Deployments options:
-1. On-premise 
+1. On-premise
 2. Managed Cloud Providers
 
 **Note:** Security controls and attack surface will differ from deployment to deployment. 
