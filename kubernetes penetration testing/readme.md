@@ -3,9 +3,11 @@
 > Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications.
 
 - [Kubernetes Penetration Testing](#kubernetes-penetration-testing)
+    + [Deployments options:](#deployments-options-)
     + [Default Services and Ports:](#default-services-and-ports-)
       - [Control-plane node(s):](#control-plane-node-s--)
       - [Worker node(s):](#worker-node-s--)
+    + [Addons](#addons)
     + [Possible Assessments](#possible-assessments)
     + [Commands/Attacks Cheatsheet](#commands-attacks-cheatsheet)
       - [Enumerate namespaces](#enumerate-namespaces)
@@ -31,7 +33,7 @@
     + [Tools](#tools)
     + [References](#references)
 
-Main deployments options:
+### Deployments options:
 1. On-premise 
 2. Managed Cloud Providers
 
@@ -56,7 +58,7 @@ Main deployments options:
 | TCP           | 10250         | Kubelet API    |
 | TCP           | 30000-32767   | Default Range for NodePort Services |
 
-#### Addons
+### Addons
 
 Kubernetes allows installation of addons. Add-ons extend the functionality of Kubernetes. These increase the attack surface and are subject to security vulnerabilities or insecure configurations. (examples: CoreDNS, Web Dashboard)
 
