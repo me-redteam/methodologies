@@ -326,7 +326,7 @@ http://<external-IP>:10255/pods
 
 #### Container Escaping 
 
-Various techniques exist to escape containers, one example being kernel exploitation as containers shared the same kernel as the host OS. Being able to do that will you be able to position yourself directly to the host running the whole Kubernetes cluster.
+Various techniques exist to escape containers, one example being kernel exploitation as containers share the same kernel as the host OS. Being able to do that will position yourself directly in the host running the whole Kubernetes cluster.
 
 #### Sniff The Network
 
