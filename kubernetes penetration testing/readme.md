@@ -2,6 +2,36 @@
 
 > Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications.
 
+- [Kubernetes Penetration Testing](#kubernetes-penetration-testing)
+    + [Default Services and Ports:](#default-services-and-ports-)
+      - [Control-plane node(s):](#control-plane-node-s--)
+      - [Worker node(s):](#worker-node-s--)
+      - [Addons](#addons)
+    + [Possible Assessments](#possible-assessments)
+    + [Commands/Attacks Cheatsheet](#commands-attacks-cheatsheet)
+      - [Enumerate namespaces](#enumerate-namespaces)
+      - [List pods in a namespace](#list-pods-in-a-namespace)
+      - [Execute commands in a pod (spawn shell)](#execute-commands-in-a-pod--spawn-shell-)
+      - [Get services](#get-services)
+      - [Get all secrets](#get-all-secrets)
+      - [API discovery](#api-discovery)
+      - [Kubelet API (Read Only - Old Releases)](#kubelet-api--read-only---old-releases-)
+      - [etcd Key Store API](#etcd-key-store-api)
+      - [Authenticated External API Requests](#authenticated-external-api-requests)
+      - [Service Token Grabber](#service-token-grabber)
+      - [RBAC Testing (Whitebox)](#rbac-testing--whitebox-)
+      - [Privilege Escalation Via Malicious Pod Creation](#privilege-escalation-via-malicious-pod-creation)
+      - [Privilege Escalation Via Get/Patch Rolebindings](#privilege-escalation-via-get-patch-rolebindings)
+      - [Privilege Escalation Via Impersonation](#privilege-escalation-via-impersonation)
+      - [Dump Keys Via Anonymous Access](#dump-keys-via-anonymous-access)
+      - [Check Read Only Kubelet Information Exposure](#check-read-only-kubelet-information-exposure)
+      - [Container Escaping](#container-escaping)
+      - [Sniff The Network](#sniff-the-network)
+      - [Bash Script To Discover Kubernetes Services](#bash-script-to-discover-kubernetes-services)
+      - [Cloud Metadata](#cloud-metadata)
+    + [Tools](#tools)
+    + [References](#references)
+
 Main deployments options:
 1. On-premise 
 2. Managed Cloud Providers
@@ -41,7 +71,7 @@ Kubernetes allows installation of addons. Add-ons extend the functionality of Ku
 
 * Compliance Scan - perform an authenticated CIS Kubernetes compliance scan using Nessus. 
 
-### Commands Cheatsheet
+### Commands/Attacks Cheatsheet
 
 #### Enumerate namespaces
 
