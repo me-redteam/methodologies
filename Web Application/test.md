@@ -129,4 +129,3 @@ Accept-Ranges: bytes
 3.9. Check whether any weak security questions/Answer are presented (if exist).
 
 3.10. Check for default credentials such as `admin/admin or root/root`, search for default credentials if the target is a product that has public ducmentation.
-
