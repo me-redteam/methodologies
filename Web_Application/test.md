@@ -59,6 +59,8 @@ site:target.com
 "target.com" send_keys
 "target.com" send,keys
 ```
+![image](https://user-images.githubusercontent.com/48615614/130426893-0f96a9ac-ae6f-491c-b608-abd36537b165.png)
+
 2.3. Setup HTTP proxy on the browser for the target application using Burpsuite to identify the application entry points and add the target to the scope.
 
 2.4. Retrieve and Analyze the `robot.txt` files (can be found in target.com/robot.txt). 
@@ -130,4 +132,23 @@ Accept-Ranges: bytes
 3.10. Check for default credentials such as `admin/admin or root/root`, search for default credentials if the target is a product that has public ducmentation.
 
 3.11. Check if the login page is protected by `SSL/TLS` to make sure that the credentials are not sent over unencrypted channel:
+
+
+
+## 4. Authorization Testing
+
+
+## 5. Session Management Testing
+
+
+## 6. Input Validation Testing
+
+
+## 7. Business Logic Testing
+
+
+## 8. Client-side Testing
+
+
+## 9. Error Handling
 
