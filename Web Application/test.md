@@ -19,17 +19,13 @@
 
 #### Active Testing
 * Information Gathering
-* Configuration and Deployment Management Testing
-* Identity Management Testing
 * Authentication Testing
 * Authorization Testing
 * Session Management Testing
 * Input Validation Testing
-* Error Handling
-* Cryptography
 * Business Logic Testing
 * Client-side Testing
-* API Testing
+* Error Handling
 
 ## 2. Information Gathering / Enumeration / Scanning
 2.1. Use a search engine to search (Google Dorks) for potentially sensitive information (In external assessment).
@@ -129,3 +125,6 @@ Accept-Ranges: bytes
 3.9. Check whether any weak security questions/Answer are presented (if exist).
 
 3.10. Check for default credentials such as `admin/admin or root/root`, search for default credentials if the target is a product that has public ducmentation.
+
+3.11. Check if the login page is protected by `SSL/TLS` to make sure that the credentials are not sent over unencrypted channel:
+
