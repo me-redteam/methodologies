@@ -6,7 +6,8 @@
 2. Grey-box (Credentials)
 3. White-box (Source Code Review)
 
-* Internal
+* External assessment
+* Internal assessment
 
 ### Assessments prerequists:
 1. VPN Access (if needed)
