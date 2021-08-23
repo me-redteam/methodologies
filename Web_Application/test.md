@@ -36,9 +36,13 @@ site:target.com
 ```
 
 `site:` will limit the search to the provided domain.
+
 `inurl:` will only return results that include the keyword in the URL.
+
 `intitle:` will only return results that have the keyword in the page title.
+
 `intext:` or `inbody:` will only search for the keyword in the body of pages.
+
 `filetype:` will match only a specific filetype, i.e. png, or php.
 
 2.2. Use Github enumeration
