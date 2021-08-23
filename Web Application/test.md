@@ -6,6 +6,8 @@
 2. Grey-box (Credentials)
 3. White-box (Source Code Review)
 
+* Internal
+
 ### Assessments prerequists:
 1. VPN Access (if needed)
 2. Mulitple user account from each available user role
@@ -99,7 +101,9 @@ Accept-Ranges: bytes
 
 2.13. Perform parameter discovery on the application using `Arjun`, use `python3 arjun.py -u https://target.com --get --post --json -t 22` (one of GET or POST or JSON) this test help you discover hiddent parameters (Optional).
 
-2.14. 
+2.14. Check if `OPTIONS` HTTP method has a risky HTTP method enabled such as `PUT or DELETE`:
+
+![image](https://user-images.githubusercontent.com/48615614/130425984-73e3ba5a-0844-47a5-a92d-93044577b9a7.png)
 
 ## 3. Authentication Testing
 3.1 Check if it is possible to `reuse` the session after Logout (on burpsuite send 1 request to the repeater then logout from the application, now on the repeater try to send the same request and check if the session was invalidated or no). also check if the application automatically logs out a user has idle for a certain amount of time.
