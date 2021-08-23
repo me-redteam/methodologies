@@ -95,6 +95,25 @@ Accept-Ranges: bytes
 
 ![image](https://user-images.githubusercontent.com/48615614/130415447-c759ca86-98a3-4a54-9497-2bb3c4772aa5.png)
 
-2.11. Perform Directory Brute force to identify more/hiddent endpoints, you can use Burpsuite intruder or other open-source tools, as example:
+2.11. You can use open source web application scanner such as `Nikto` by using `nikto -h target.com`.
+
+2.12. Perform Directory Brute force to identify more/hiddent endpoints, you can use Burpsuite intruder or other open-source tools, as example:
 * ```ffuf -w Documents/wordlist/Common.txt -u https://target.com/FUZZ -c -recursion -recursion-depth 5```
-* ```dirb target.com```
+* ```dirb https://target.com```
+
+2.13. Perform parameter discovery on the application using `Arjun`, use `python3 arjun.py -u https://target.com --get --post --json -t 22` (one of GET or POST or JSON) this test help you discover hiddent parameters (Optional).
+
+2.14. 
+
+## 3. Authentication Testing
+3.1 Check if it is possible to `reuse` the session after Logout (on burpsuite send 1 request to the repeater then logout from the application, now on the repeater try to send the same request and check if the session was invalidated or no). also check if the application automatically logs out a user has idle for a certain amount of time.
+
+3.2. Check whether any sensitive information remain stored in browser cache `on the browser click on F12 then go to Storage`:
+
+![image](https://user-images.githubusercontent.com/48615614/130417882-37b9b1ee-c93a-4e1e-8898-37f9a30e6cb6.png)
+
+3.3. Check if it's possible to bypass the authentication using SQL injection by trying true and false condition on the login parameters, for example `' OR 1=1--+`:
+
+![image](https://user-images.githubusercontent.com/48615614/130419286-4acbc6f1-d5f2-4e4b-b9b0-7540c6a3ffbd.png)
+
+3.4. Check if you can access any page that require authentication while you are not authentication to the application such as visting `https://target.com/profile`.
