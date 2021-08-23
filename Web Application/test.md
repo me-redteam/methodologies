@@ -31,7 +31,7 @@
 * Client-side Testing
 * API Testing
 
-## 2. Information Gathering
+## 2. Information Gathering / Enumeration / Scanning
 2.1. Use a search engine to search (Google Dorks) for potentially sensitive information (In external assessment).
 ```
 site:target.com
@@ -64,10 +64,37 @@ filetype: will match only a specific filetype, i.e. png, or php.
 ```
 2.3. Setup HTTP proxy on the browser for the target application using Burpsuite to identify the application entry points and add the target to the scope.
 
-2.4. Retrieve and Analyze the robot.txt files (can be found in target.com/robot.txt). 
+2.4. Retrieve and Analyze the `robot.txt` files (can be found in target.com/robot.txt). 
 
 2.5. Use Fingerprint Tool such as Nmap perform port scan and service Fingerprinting ```nmap -sV -Pn target.com -oA results ```.
 
 2.6. On the application pages do mouse Right-click and check the HTML pages code and look for any useful information such as framework version, credentials, endpoints or any forgoton comments.
 
-2.7. Check the application HTTP response's headers and look for the technology being used such as ```operating system, Web server, versions..etc```.
+2.7. Check the application HTTP response's headers and look for the technology being used such as ```operating system, Web server, versions..etc``` such as the below HTTP response example.
+```
+HTTP/1.1 200 OK
+Server: nginx/1.17.3
+Date: Thu, 05 Sep 2019 17:50:24 GMT
+Content-Type: text/html
+Content-Length: 117
+Last-Modified: Thu, 05 Sep 2019 17:40:42 GMT
+Connection: close
+ETag: "5d71489a-75"
+Accept-Ranges: bytes
+```
+2.8. Check the application HTTP response if important security headers are missing such as:
+* ```Strict-Transport-Security```
+* ```Content-Security-Policy```
+* ```X-XSS-Protection```
+
+2.9. On Burpsuite perform Content Discovery on the target application to crawl the application contents ```right-click on the target > Engagement tools > Discover content```:
+
+![image](https://user-images.githubusercontent.com/48615614/130413453-a6219224-0561-4a80-a6fd-d1061ad3b218.png)
+
+2.10. On burpsuite right-click on the target and click on `actively scan this host` to launch a web application scanning on the target:
+
+![image](https://user-images.githubusercontent.com/48615614/130415447-c759ca86-98a3-4a54-9497-2bb3c4772aa5.png)
+
+2.11. Perform Directory Brute force to identify more/hiddent endpoints, you can use Burpsuite intruder or other open-source tools, as example:
+* ```ffuf -w Documents/wordlist/Common.txt -u https://target.com/FUZZ -c -recursion -recursion-depth 5```
+* ```dirb target.com```
