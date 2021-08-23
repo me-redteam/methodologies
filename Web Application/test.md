@@ -117,3 +117,16 @@ Accept-Ranges: bytes
 ![image](https://user-images.githubusercontent.com/48615614/130419286-4acbc6f1-d5f2-4e4b-b9b0-7540c6a3ffbd.png)
 
 3.4. Check if you can access any page that require authentication while you are not authentication to the application such as visting `https://target.com/profile`.
+
+3.5 If the application is using `OTP`, check if you can bypass it by intercepting HTTP login request on Burpsuite and remove the OTP parameter then send the request, if the request was accepted by the web server then it's bypassible.
+
+3.6. If `CAPTCHA` exist, check if you can bypass it by intercepting HTTP login request on Burpsuite and remove the captcha parameter then send the request, if the request was accepted by the web server then it's bypassible.
+
+3.7. For critical applications such as `Web mails or admin portals` check if 2-factor authentication implemented on the login page or not.
+
+3.8. When creating a new account, check if the application accepts weak passwords such as `1234 or password1`.
+
+3.9. Check whether any weak security questions/Answer are presented (if exist).
+
+3.10. Check for default credentials such as `admin/admin or root/root`, search for default credentials if the target is a product that has public ducmentation.
+
