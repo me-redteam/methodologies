@@ -175,10 +175,15 @@ Accept-Ranges: bytes
 
 ## 6. Input Validation Testing
 6.1. Collect as much as you can target's endpoint, check all the endpoints that has parameters, focus on those parameters that retrieve data from backend databases.
+
 6.2. For testing SQL injection, you can start by testing for error based SQLi, you can insert single-quote`'`, double-quote `''`, backtick or semi-colon `;` in each parameter and send it and check the HTTP response for eny SQL errors.
+
 6.3. Check for blind SQL injection by inserting a true/false conditions into the parameters such as `' OR 1=1--` and check if there is any different after sending the request.
+
 6.4. You can run a SQL injection scanner on all requests, simply copy any HTTP request that has parameters and add to a text file and run `sqlmap.py -r Desktop/request.txt` this is a simple test, you can check all `sqlmap` flags such as `--dbs`, `--T`, `--risk`..etc.
+
 6.5. You can more automated tools such as `sqlninja`, `sqldumper` and `sql power injector`.
+
 6.6. Perform Union Query SQL injection testing.
 
 
