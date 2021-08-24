@@ -103,7 +103,7 @@ Accept-Ranges: bytes
 
 2.13. Perform parameter discovery on the application using `Arjun`, use `python3 arjun.py -u https://target.com --get --post --json -t 22` (one of GET or POST or JSON) this test help you discover hiddent parameters (Optional).
 
-2.14. Check if `OPTIONS` HTTP method has a risky HTTP method enabled such as `PUT or DELETE`:
+2.14. Check if `OPTIONS` HTTP method has a risky HTTP method enabled such as `PUT` or `DELETE`:
 
 ![image](https://user-images.githubusercontent.com/48615614/130425984-73e3ba5a-0844-47a5-a92d-93044577b9a7.png)
 
@@ -147,6 +147,12 @@ Accept-Ranges: bytes
 
 4.4. Test for `Path Traversal`, by performing input vector enumeration and analyze the input validation functions presented in the web application, you can use burpsuite intruder adn repeater.
 
+4.5. Check if is it possible to access that resource even if you are not authenticated.
+
+4.6. Check if is it possible to access that resource after the log-out.
+
+4.7. Check if is it possible to access functions and resources that should be accessible to a user that holds a different role or privilege.
+
 ## 5. Session Management Testing
 5.1. Identify actual session cookie out of bulk cookies in the application, as most of the application has many cookies, so you need to identify which one is the session cookie.
 
@@ -162,8 +168,18 @@ Accept-Ranges: bytes
 
 5.7. Test the session Fixation, to avoid seal user session (session Hijacking), this can be done to check if you get a new cookie session after you login successfully and its different from the one you had before login. 
 
+5.8. Check for CSRF
+
+5.9. check for JSON Web Tokens and determine whether the JWTs expose sensitive information, and determine whether the JWTs can be tampered with or modified https://github.com/me-redteam/wstg/blob/master/document/4-Web_Application_Security_Testing/06-Session_Management_Testing/10-Testing_JSON_Web_Tokens.md.
+
 
 ## 6. Input Validation Testing
+6.1. Collect as much as you can target's endpoint, check all the endpoints that has parameters, focus on those parameters that retrieve data from backend databases.
+6.2. For testing SQL injection, you can start by testing for error based SQLi, you can insert single-quote`'`, double-quote `''`, backtick or semi-colon `;` in each parameter and send it and check the HTTP response for eny SQL errors.
+6.3. Check for blind SQL injection by inserting a true/false conditions into the parameters such as `' OR 1=1--` and check if there is any different after sending the request.
+6.4. You can run a SQL injection scanner on all requests, simply copy any HTTP request that has parameters and add to a text file and run `sqlmap.py -r Desktop/request.txt` this is a simple test, you can check all `sqlmap` flags such as `--dbs`, `--T`, `--risk`..etc.
+6.5. You can more automated tools such as `sqlninja`, `sqldumper` and `sql power injector`.
+6.6. Perform Union Query SQL injection testing.
 
 
 ## 7. Business Logic Testing
