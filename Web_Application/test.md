@@ -130,16 +130,38 @@ Accept-Ranges: bytes
 
 3.9. Check whether any weak security questions/Answer are presented (if exist).
 
-3.10. Check for default credentials such as `admin/admin or root/root`, search for default credentials if the target is a product that has public ducmentation.
+3.10. Check for default credentials such as `admin/admin` or `root/root`, search for default credentials if the target is a product that has public ducmentation.
 
-3.11. Check if the login page is protected by `SSL/TLS` to make sure that the credentials are not sent over unencrypted channel:
+3.11. Check if the login page is protected by `SSL/TLS` to make sure that the credentials are not sent over unencrypted channel.
 
+3.12. Check for username enumeration, try to enter a random name, and see the application response if its indicating that the username exist but the password is incorrect, or the application will response with a generic message.
 
+3.13. Test user account lockout mechanism on brute force attack.
 
 ## 4. Authorization Testing
+4.1. Test the Role and Privilege Manipulation to Access the Resources, for example, if you have normal user account and admin user account, try to access the admin resources using the normal user account, try to perform action that should be done by admins only.
 
+4.2. Try to decode/decrypt the user session cookie, and try to find anything related to the user role/privilege and change it to see if you can get a privilege escalation to a higher privilege role.
+
+4.3. Look for `Insecure direct object references (IDOR)`, means if you found that accessing a specific file has parameter `id=5` try to change the value and check if you can access different resources related to other users, look for all the parameters in `GET` and `POST`.
+
+4.4. Test for `Path Traversal`, by performing input vector enumeration and analyze the input validation functions presented in the web application, you can use burpsuite intruder adn repeater.
 
 ## 5. Session Management Testing
+5.1. Identify actual session cookie out of bulk cookies in the application, as most of the application has many cookies, so you need to identify wihch one is the session cookie.
+
+5.2 Decode cookies using some standard decoding algorithms such as `Base64`, `hex`, `URL`, etc, you can use Burpsuite decoder tool.
+
+5.3 Modify cookie session token value by 1 bit/byte. Then resubmit and do the same for all tokens. Reduce the amount of work you need to perform in order to identify which part of the token is actually being used and which is not
+
+5.4. Check for session cookies and cookie expiration date/time.
+
+5.5. Check for HttpOnly and Secure (if the application is over SSL) flags in cookie.
+
+5.6. Check if any user information is stored in cookie value or not If yes, tamper it with other user's data so you can try to esclate your privileges.
+
+5.7. Test the session Fixation, to avoid seal user session.(session Hijacking), this can be done to check if you get a new cookie session after you login successfully and its different from the one you had before login. 
+
 
 
 ## 6. Input Validation Testing
