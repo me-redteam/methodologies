@@ -148,7 +148,7 @@ Accept-Ranges: bytes
 4.4. Test for `Path Traversal`, by performing input vector enumeration and analyze the input validation functions presented in the web application, you can use burpsuite intruder adn repeater.
 
 ## 5. Session Management Testing
-5.1. Identify actual session cookie out of bulk cookies in the application, as most of the application has many cookies, so you need to identify wihch one is the session cookie.
+5.1. Identify actual session cookie out of bulk cookies in the application, as most of the application has many cookies, so you need to identify which one is the session cookie.
 
 5.2 Decode cookies using some standard decoding algorithms such as `Base64`, `hex`, `URL`, etc, you can use Burpsuite decoder tool.
 
@@ -156,12 +156,11 @@ Accept-Ranges: bytes
 
 5.4. Check for session cookies and cookie expiration date/time.
 
-5.5. Check for HttpOnly and Secure (if the application is over SSL) flags in cookie.
+5.5. Check for `HttpOnly` and `Secure` (if the application is over SSL) flags in cookie.
 
-5.6. Check if any user information is stored in cookie value or not If yes, tamper it with other user's data so you can try to esclate your privileges.
+5.6. Check if any user information is stored in cookie value or not If yes, tamper it with other user's data so you can try to escalate your privileges.
 
-5.7. Test the session Fixation, to avoid seal user session.(session Hijacking), this can be done to check if you get a new cookie session after you login successfully and its different from the one you had before login. 
-
+5.7. Test the session Fixation, to avoid seal user session (session Hijacking), this can be done to check if you get a new cookie session after you login successfully and its different from the one you had before login. 
 
 
 ## 6. Input Validation Testing
@@ -169,9 +168,11 @@ Accept-Ranges: bytes
 
 ## 7. Business Logic Testing
 
+## 8. Error Handling
 
-## 8. Client-side Testing
+
+## 9. Other Test Cases (All Categories)
 
 
-## 9. Error Handling
+
 
