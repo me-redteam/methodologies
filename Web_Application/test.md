@@ -168,7 +168,7 @@ Accept-Ranges: bytes
 
 5.7. Test the session Fixation, to avoid seal user session (session Hijacking), this can be done to check if you get a new cookie session after you login successfully and its different from the one you had before login. 
 
-5.8. Check for CSRF
+5.8. Check for CSRF, and check if the application is missing `anti-csrf` token to prevent such attack.
 
 5.9. check for JSON Web Tokens and determine whether the JWTs expose sensitive information, and determine whether the JWTs can be tampered with or modified https://github.com/me-redteam/wstg/blob/master/document/4-Web_Application_Security_Testing/06-Session_Management_Testing/10-Testing_JSON_Web_Tokens.md.
 
