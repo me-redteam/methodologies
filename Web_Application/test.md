@@ -273,7 +273,8 @@ Parameter ENTITY can be only used within the DTD, we can use the below payload t
 
 
 ## 9. Other Test Cases (All Categories)
-
+9.1. Test for `Upload of Unexpected File Types`, you need to verify that the unexpected file types are rejected and handled safely, for example if a website has upload function that ask to upload `pdf` files only, you can try to upload any other file types such as `.php`, `.aspx`..etc.
+9.2. Try to bypass any upload types filters by using `Null Byte (%00) Bypass` > `file.pdf%00`  or by double extension > `file.php.pdf`.
 
 
 
