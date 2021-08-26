@@ -336,12 +336,48 @@ Parameter ENTITY can be only used within the DTD, we can use the below payload t
 
 9.21. Use `subjack` tool to look for any subdomain takeover flaws, you can use `subjack -w all-domains.txt -t 100 -timeout 30 -o subTakeover/results.txt -ssl`.
 
+
 * Subdomain Enumeration
-* 
+
+9.22. Use on of the below tools:
 ```
-amass enum -passive -d target.com >> amass.txt 
-assetfinder --subs-only target.com
-subfinder -d target.com >> subfinder.txt
+1. amass enum -passive -d target.com >> amass.txt 
+2. assetfinder --subs-only target.com
+3. subfinder -d target.com >> subfinder.txt
 ```
 
+* Single Sign-On SSO Testing
 
+9.23. If `target.com/internal` redirects you to SSO e.g. Google login, try to insert `public` Before `internal` e.g. `target.com/public/internal` to gain access internal.
+
+9.24. If `internal.target.com` redirects you to SSO e.g. `auth.target.com`, you can do FUZZ on `Internal.target.com`.
+
+9.25. Try to craft `SAML` request with token and send it to the server and figure out how server interact with this.
+
+9.26. Try to inject `XXE` payloads at the top of the `SAML` response.
+
+9.27. While testing `SSO` try to search in burpsuite about URLs in cookie header e.g. `host=ip`, if there is try to change IP to your IP to get `SSRF`.
+
+
+* CAPTCHA Testing
+
+9.28. Send old captcha value.
+
+9.29. Send old captcha value with old session ID.
+
+9.30. Remove captcha with any adblocker and request again.
+
+9.31. Change from POST to GET.
+
+9.32. Remove captcha parameter from the HTTP request.
+
+9.33. Convert `JSON` request to normal.
+
+
+* Test For Weak Cryptography
+
+9.34. Test for weak `SSL/TLS` transport layer protection, simply you can scan the application using `sslscan target.com` https://github.com/rbsec/sslscan.
+
+9.35. Check if the sensititve pages such as login pages or pages has credeit card numbers is missing secure `SSL/TLS` connection.
+
+> By ADGovCERT Red Team
