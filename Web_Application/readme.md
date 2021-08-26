@@ -26,9 +26,7 @@
 * Authorization Testing
 * Session Management Testing
 * Input Validation Testing
-* Business Logic Testing
-* Client-side Testing
-* Error Handling
+* Other Test Cases (All Categories)
 
 ## 2. Information Gathering / Enumeration / Scanning
 2.1. Use a search engine to search (Google Dorks) for potentially sensitive information (In external assessment).
@@ -280,10 +278,7 @@ Parameter ENTITY can be only used within the DTD, we can use the below payload t
 3.20. You can check for other injection attacks such as `LDAP injection`, `LFI and RFI`, `Server Side Template Injection`, `Host Header Injection`..etc check https://github.com/me-redteam/wstg/tree/master/document/4-Web_Application_Security_Testing/07-Input_Validation_Testing.
 
 
-## 8. Error Handling
-
-
-## 9. Other Test Cases (All Categories)
+## 7. Other Test Cases (All Categories)
 * File Upload Testing
 
 9.1. Test for `Upload of Unexpected File Types`, you need to verify that the unexpected file types are rejected and handled safely, for example if a website has upload function that ask to upload `pdf` files only, you can try to upload any other file types such as `.php`, `.aspx`..etc https://www.aptive.co.uk/blog/unrestricted-file-upload-testing.
