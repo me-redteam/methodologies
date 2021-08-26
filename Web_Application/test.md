@@ -327,3 +327,21 @@ Parameter ENTITY can be only used within the DTD, we can use the below payload t
 9.18. Check if active session gets destroyed upon changing the password or not.
 
 9.19. Send continuous forget password requests so that it may send sequential tokens.
+
+* JavaScript Files Analysis
+
+9.20. Analyze the application JavaScript files so you can identify hidden endpoints or you can find more interesting details, you can use `JSFScan -l alive.txt -e -s -m -o output/` download the toold from this link `https://github.com/KathanP19/JSFScan.sh`.
+
+* Subdomain Takeover
+
+9.21. Use `subjack` tool to look for any subdomain takeover flaws, you can use `subjack -w all-domains.txt -t 100 -timeout 30 -o subTakeover/results.txt -ssl`.
+
+* Subdomain Enumeration
+* 
+```
+amass enum -passive -d target.com >> amass.txt 
+assetfinder --subs-only target.com
+subfinder -d target.com >> subfinder.txt
+```
+
+
