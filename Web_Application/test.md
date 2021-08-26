@@ -273,8 +273,46 @@ Parameter ENTITY can be only used within the DTD, we can use the below payload t
 
 
 ## 9. Other Test Cases (All Categories)
-9.1. Test for `Upload of Unexpected File Types`, you need to verify that the unexpected file types are rejected and handled safely, for example if a website has upload function that ask to upload `pdf` files only, you can try to upload any other file types such as `.php`, `.aspx`..etc.
+* File Upload Testing
+
+9.1. Test for `Upload of Unexpected File Types`, you need to verify that the unexpected file types are rejected and handled safely, for example if a website has upload function that ask to upload `pdf` files only, you can try to upload any other file types such as `.php`, `.aspx`..etc https://www.aptive.co.uk/blog/unrestricted-file-upload-testing.
+
 9.2. Try to bypass any upload types filters by using `Null Byte (%00) Bypass` > `file.pdf%00`  or by double extension > `file.php.pdf`.
 
+9.3. Change the capitalisation of the extension, such as `file.PhP` or `file.AspX`.
 
+9.4. Change the extensions to a less common extension, such as `file.php5`, `file.shtml`, `file.asa`, `file.jsp`, `file.jspx`, `file.aspx`, `file.asp`, `file.phtml`, `file.cshtml`.
 
+9.5. Using special trailing characters such as spaces, dots or null characters such as `file.asp...`, `file.php;jpg`, `file.asp%00.jpg`, `1.jpg%00.php`.
+
+9.6. Check if the website only check the file type by `Content-Type` in HTTP request.
+
+9.7. Check if the website only do file type check in client-side JavaScript and check if the website only check by the file extension.
+
+9.8. Check for uploading a malicious file types, such as uploading a file contains shellcode.
+
+* Contact Us Form Testing
+
+9.9. Is CAPTCHA implemented on contact us form in order to restrict email flooding attacks.
+
+9.10. Check if it allow to upload file on the server.
+
+9.11. Try to test for `blind XSS` by injecting a XSS payload into the contact us form and check if there are any response coming to your server.
+
+* Forgot Password Testing
+
+9.12. Check for failure to invalidate session on Logout and Password reset.
+
+9.13. Check if forget password reset link/code uniqueness.
+
+9.14. Check if reset link does get expire or not, if its not used by the user for certain amount of time.
+
+9.15. Find user account identification parameter and tamper Id or parameter value to change other user's password.
+
+9.16. If reset link has another param such as date and time, then. Change date and time value in order to make active & valid reset link.
+
+9.17. Submit for two password reset link and use the older one from user's email and check if its still valid or no.
+
+9.18. Check if active session gets destroyed upon changing the password or not.
+
+9.19. Send continuous forget password requests so that it may send sequential tokens.
