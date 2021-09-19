@@ -375,4 +375,4 @@ Parameter ENTITY can be only used within the DTD, we can use the below payload t
 
 9.35. Check if the sensititve pages such as login pages or pages has credeit card numbers is missing secure `SSL/TLS` connection.
 
-> By ADGovCERT Red Team
+
