@@ -359,13 +359,15 @@ Tool:
 **Dnscan**
 
 - Description
-- 
+
 AXFR, brute force
 https://github.com/rbsec/dnscan
 
 - Installation
+
 `git clone https://github.com/rbsec/dnscan.git`
 - Usage
+
 `./dnscan.py -l target.txt -T`
 
 
