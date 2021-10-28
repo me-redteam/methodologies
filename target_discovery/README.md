@@ -18,10 +18,8 @@ Gathering information without alerting the subject of the surveillance is passiv
 
 
 **Note: there are various of tools and ways to discover each method.**
+## Methods
 
-* [Passive Target Discovery](#passive-target-discovery)
-   * [<strong>Passive recon</strong>](#passive-recon)
-      * [Methods details:](#methods-details)
    * [<strong>1- Obtains important DNS records that commonly used types:</strong>](#1--obtains-important-dns-records-that-commonly-used-types)
    * [<strong>2- Reverse DNS Lookup - PTR Record for main domain</strong>](#2--reverse-dns-lookup---ptr-record-for-main-domain)
    * [<strong>3- Whois lookup domain name</strong>](#3--whois-lookup-domain-name)
@@ -41,29 +39,6 @@ Gathering information without alerting the subject of the surveillance is passiv
    * [<strong>17- Virtual Host Enumeration</strong>](#17--virtual-host-enumeration)
    * [<strong>18- Alterations &amp; permutations of already known subdomains</strong>](#18--alterations--permutations-of-already-known-subdomains)
    * [<strong>19- TLD expansion</strong>](#19--tld-expansion)
-
-
-Methods List  | 
-------------- | 
-Obtains important DNS records that commonly used types | 
-Reverse DNS Lookup - PTR Record for main domain |
-Whois lookup domain name |
-Whois lookup IP address |
-ASN blocks discovery |
-Scrape Certificate Transparency Logs |
-Forwards DNS Bruteforcing on domain name (Subdomain Enumeration) |
-Reverse DNS lookups for identified subnets (PTR Record) |
-Search Engine Scraping / Dorking (Google/Bing/Yandex) |
-Shodan Enumeration |
-Wayback Machine |
-Metadata Scraping |
-Static analysis of associated mobile applications |
-Social Media Scraping |
-Passive DNS Recon |
-Github/Gitlab Enumeration |
-Virtual Host Enumeraton  |
-Alterations & permutations of already known subdomains |
-TLD expansion |
 
 
 
