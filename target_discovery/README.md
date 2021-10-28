@@ -80,6 +80,7 @@ The Reverse Lookup tool will do a reverse IP lookup. If you type in an IP addres
 
 Tool: 
 
+
 **Fierce**
 
 - Description
@@ -110,6 +111,7 @@ WHOIS allows you to look up the name and contact information of whoever operates
 
 Tool:
 
+
 **Whois**
 
 - Installation
@@ -134,6 +136,7 @@ https://www.whois.com/whois/
 IP WHOIS Lookup Tool offers a free IP Lookup Service to check who owns an IP address. 
 
 Tools: 
+
 
 **ASN**
 
@@ -170,6 +173,7 @@ https://bgpview.io
 Finding ASN will help us identify netblocks of the domains.
 
 Tools:
+
 **Amass**
 
 - Description
@@ -201,6 +205,7 @@ Enumerate subdomains using CT logs
 Tool:
 
 **CTFR**
+
 https://github.com/UnaPibaGeek/ctfr
 
 - Installation
@@ -229,6 +234,7 @@ Tool:
 - Description
 
 Resolve live subdomain and get the IP addresses.
+
 https://github.com/Josue87/resolveDomains
 
 - Installation
@@ -261,6 +267,7 @@ fierce –range x.x.x.x/xx
 
 
 ## **9- Search Engine Scraping / Dorking (Google/Bing/Yandex)**
+
 Tool:
 
 **Sublist3r**
@@ -268,6 +275,7 @@ Tool:
 - Description
 
 Baidu, Yahoo, Google, Bing, Ask, Netcraft, DNSdumpster, VirusTotal, Threat Crowd, SSL Certificates, PassiveDNS
+
 https://github.com/aboul3la/Sublist3r
 
 - Installation
@@ -308,6 +316,7 @@ https://thedarksource.com/shodan-cheat-sheet
 Find forgotten domains/URLs
 
 GUI tool:
+
 https://archive.org/web/
 
 
@@ -324,6 +333,7 @@ Search for the target if they have mobile app from all the stores.
 Tool:
 
 **Mobile Security Framework (MobSF)**
+
 https://github.com/MobSF/Mobile-Security-Framework-MobSF
 
 
@@ -339,6 +349,7 @@ From the DNS lookup you might find emails for the owner or any contact of the ta
 ## **15- Passive DNS Recon** 
 
 GUI tool:
+
 https://dnsdumpster.com/
 
 
