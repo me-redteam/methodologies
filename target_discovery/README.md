@@ -282,7 +282,7 @@ https://archive.org/web/
 
 
 ## **12- Metadata Scraping** 
-Try to find any metadata if all the founded/leaked files of the target.
+Try to find any metadata of the founded/leaked files of the target.
 
 
 
