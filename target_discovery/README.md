@@ -365,9 +365,36 @@ For example we will use the **gitGraber** tool,
 ```
 git clone https://github.com/hisxo/gitGraber.git
 ```
+
 ```
 pip install -r requirements.txt
 ```
+
+Add your Github API key where you can find instruction from  GitHub  [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) 
+
+Then you need to add your API key in the tool file **config.py**:
+
+
+```
+GITHUB_TOKENS = ['**API_KEY**']
+GITHUB_URL_FILE = 'rawGitUrls.txt'
+GITHUB_API_URL = 'https://api.github.com/search/code?q='
+GITHUB_API_COMMIT_URL = 'https://api.github.com/repos/'
+GITHUB_SEARCH_PARAMS = '&sort=indexed&o=desc'
+GITHUB_BASE_URL = 'https://github.com'
+GITHUB_MAX_RETRY = 10
+DISCORD_WEBHOOKURL = 'https://discordapp.com/api/webhooks/7XXXXXXXXXXXXXX/XXXXXXXXXXXXXXXXXXXXXX'
+SLACK_WEBHOOKURL = 'https://hooks.slack.com/services/TXXXXXXXX/BXXXXXXXX/XXXXXXXXXXXXXXXXXXXXXXX'
+TELEGRAM_CONFIG = {
+    "token": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "chat_id": -999999999999999
+}
+```
+
+
+Then save the file.
+
+
 - Usage
 
 ```
