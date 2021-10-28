@@ -1,4 +1,4 @@
-# Target Discovery 
+# Passive Target Discovery 
 
 Recon in general Information Gathering, just collecting info about some organization or personal we can say it as recon.
 Recon in general Will be described as information collection/OSINT/Discovery etc.
