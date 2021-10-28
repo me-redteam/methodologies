@@ -4,21 +4,22 @@ Recon in general Information Gathering, just collecting info about some organiza
 Recon in general Will be described as information collection/OSINT/Discovery etc.
 
 
-Two Types of recon in general:
+Two types of recon in general:
 
- Active
+Active
 ------------- | 
 passive 
 
 
 
-Passive recon 
+**Passive recon**
+
 Gathering information without alerting the subject of the surveillance is passive reconnaissance. This is the natural start of any reconnaissance because, once alerted, a target will likely react by drastically increasing security in anticipation of an attack. This is like casing a place prior to robbing it.
 
 
 
+**Note: there are various of tools and ways to discover each method.**
 
-Note: there are various of tools and ways to discover each method.
 
 
 Methods List  | 
@@ -46,6 +47,7 @@ TLD expansion |
 
 
 Methods details:
+
 
 **1- Obtains important DNS records that commonly used types:**
 
@@ -97,8 +99,8 @@ Installed by default on Kali
 `fierce –domain target.com`
 
 GUI tool:
-https://mxtoolbox.com/
 
+https://mxtoolbox.com/
 
 
 
@@ -380,6 +382,7 @@ Python 3:
 
 
 **19- TLD expansion**
+
 Tool:
 
 **Dnscan**
