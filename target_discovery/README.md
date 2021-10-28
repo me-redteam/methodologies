@@ -67,7 +67,9 @@ Installed by default in Kali, otherwise:
 
 -	Usage:
 
-`dig (DNS Record) target.com +noall +answer`
+```
+dig (DNS Record) target.com +noall +answer
+```
 
 
 
@@ -92,7 +94,9 @@ Installed by default on Kali
 
 - Usage:
 
-`fierce –domain target.com`
+```
+fierce –domain target.com
+```
 
 GUI tool:
 
@@ -114,7 +118,9 @@ Installed by default on Kali
 
 - Usage 
 
-`Whois target.com`
+```
+Whois target.com
+```
 
 GUI tool:
 http://whois.aeda.ae/
@@ -139,12 +145,18 @@ https://github.com/nitefood/asn
 
 - Installation
 
-`Git clone https://github.com/nitefood/asn.git`
-`sudo apt -y install curl whois bind9-host mtr-tiny jq ipcalc grepcidr ncat aha`
+```
+Git clone https://github.com/nitefood/asn.git
+```
+```
+sudo apt -y install curl whois bind9-host mtr-tiny jq ipcalc grepcidr ncat aha
+```
 
 - Usage
 
-`./asn -n target IP`
+```
+./asn -n target IP
+```
 
 - GUI Tool
 
@@ -165,11 +177,15 @@ Tools:
 Brute force, Google, VirusTotal, alt names, ASN discovery
 - Installation
 
-`sudo apt-get install amass`
+```
+sudo apt-get install amass
+```
 
 - Usage
 
-`amass enum -d target.com`
+```
+amass enum -d target.com
+```
 
 GUI tool:
 
@@ -189,10 +205,14 @@ https://github.com/UnaPibaGeek/ctfr
 
 - Installation
 
-`git clone https://github.com/UnaPibaGeek/ctfr.git`
+```
+git clone https://github.com/UnaPibaGeek/ctfr.git
+```
 
 - Usage
-`python3 ctfr.py -d target.com`
+```
+python3 ctfr.py -d target.com
+```
 
 GUI tool:
 https://crt.sh/
@@ -213,11 +233,15 @@ https://github.com/Josue87/resolveDomains
 
 - Installation
 
-`git clone https://github.com/Josue87/resolveDomains.gitUsage`
+```
+git clone https://github.com/Josue87/resolveDomains.gitUsage
+```
 
 - Usage
 
-`./resolveDomains -d targetsubdomian.txt`
+```
+./resolveDomains -d targetsubdomian.txt
+```
 
 
 
@@ -229,7 +253,9 @@ Tool:
 **Fierce** 
 - Usage:
 
-`fierce –range x.x.x.x/xx`
+```
+fierce –range x.x.x.x/xx
+```
 
 
 
@@ -246,12 +272,18 @@ https://github.com/aboul3la/Sublist3r
 
 - Installation
 
-`git clone https://github.com/aboul3la/Sublist3r.git`
-`pip install -r requirements.txt`
+```
+git clone https://github.com/aboul3la/Sublist3r.git
+```
+```
+pip install -r requirements.txt
+```
 
 - Usage
 
-`python3 sublist3r.py -d targets.com`
+```
+python3 sublist3r.py -d targets.com
+```
 
 **Google**
 Search engine
@@ -328,7 +360,19 @@ https://github.com/obheda12/GitDorker |
 
 **All you need is to generate an API key from your GitHub account and store it in a specific file depend on the tool you choice.**
 
+For example we will use the **gitGraber** tool,
+- Installation
+```
+git clone https://github.com/hisxo/gitGraber.git
+```
+```
+pip install -r requirements.txt
+```
+- Usage
 
+```
+python3 gitGraber.py -k wordlists/keywords.txt -q "target.com"
+```
 
 
 ## **17- Virtual Host Enumeration** 
@@ -340,12 +384,18 @@ Expand the target by detecting old or deprecated code. It may also reveal hidden
 
 - Installation
 
-`git clone https://github.com/aboul3la/Sublist3r.git`
-`pip install -r requirements.txt`
+```
+git clone https://github.com/aboul3la/Sublist3r.git
+```
+```
+pip install -r requirements.txt
+```
 
 - Usage
 
-`python3 sublist3r.py -d targets.com`
+```
+python3 sublist3r.py -d target.com
+```
 
 
 
@@ -357,22 +407,31 @@ Tool:
 **AltDNS**
 - Description
 Subdomain discovery through alterations and permutations
+
 https://github.com/infosec-au/altdns
 
 - Installation
-`git clone https://github.com/infosec-au/altdns.git`
+```
+git clone https://github.com/infosec-au/altdns.git
+```
 
 Python 2:
 
-`pip install py-altdns==1.0.0`
+```
+pip install py-altdns==1.0.0
+```
 
 Python 3:
 
-`pip3 install py-altdns==1.0.2`
+```
+pip3 install py-altdns==1.0.2
+```
 
 - Usage
 
-`altdns -i subdomains.txt -o data_output -w words.txt -r -s results_output.txt`
+```
+altdns -i subdomains.txt -o data_output -w words.txt -r -s results_output.txt
+```
 
 
 
@@ -386,14 +445,19 @@ Tool:
 - Description
 
 AXFR, brute force
+
 https://github.com/rbsec/dnscan
 
 - Installation
 
-`git clone https://github.com/rbsec/dnscan.git`
+```
+git clone https://github.com/rbsec/dnscan.git
+```
 - Usage
 
-`./dnscan.py -l target.txt -T`
+```
+./dnscan.py -l target.txt -T
+```
 
 
 
