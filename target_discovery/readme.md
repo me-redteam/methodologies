@@ -4,8 +4,11 @@ Recon in general Information Gathering, just collecting info about some organiza
 Recon in general Will be described as information collection/OSINT/Discovery etc.
 
 
-Two Types in general:
-Active and passive recon
+Two Types of recon in general:
+
+ Active
+------------- | 
+passive 
 
 
 
