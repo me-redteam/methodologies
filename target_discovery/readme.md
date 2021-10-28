@@ -32,13 +32,18 @@ Methods:
 Tool:
 
 **Dig**
+
 - Description:
 Zone transfer, DNS lookups & reverse lookups
+
 - Installation:
 Installed by default in Kali, otherwise:
+
 -	Usage:
--
+
 `dig (DNS Record) target.com +noall +answer`
+
+
 
 2- Reverse DNS Lookup - PTR Record for main domain
 
@@ -47,6 +52,7 @@ The Reverse Lookup tool will do a reverse IP lookup. If you type in an IP addres
 Tool: 
 
 **Fierce**
+
 - Description
 
 AXFR, brute force, reverse DNS
@@ -54,13 +60,17 @@ AXFR, brute force, reverse DNS
 https://github.com/bbhunter/fierce-domain-scanner 
  
 - Installation:
+
 Installed by default on Kali
+
 - Usage:
 
 `fierce –domain target.com`
 
 GUI tool:
 https://mxtoolbox.com/
+
+
 
 3- Whois lookup domain name:
 
@@ -69,9 +79,11 @@ WHOIS allows you to look up the name and contact information of whoever operates
 Tool:
 
 **Whois**
+
 - Installation
-- 
+ 
 Installed by default on Kali
+
 - Usage 
 
 `Whois target.com`
@@ -80,6 +92,8 @@ GUI tool:
 http://whois.aeda.ae/
 https://www.whois.com/whois/
 
+
+
 4- Whois lookup IP address
 
 IP WHOIS Lookup Tool offers a free IP Lookup Service to check who owns an IP address. 
@@ -87,15 +101,16 @@ IP WHOIS Lookup Tool offers a free IP Lookup Service to check who owns an IP add
 Tools: 
 
 **ASN**
+
 - Description:
+
 ASN / RPKI validity / BGP stats / IPv4v6 / Prefix / ASPath / Organization / IP reputation & geolocation lookup tool / Web traceroute server.
 
 https://github.com/nitefood/asn
 
-
 - Installation
 
-Git clone https://github.com/nitefood/asn.git
+`Git clone https://github.com/nitefood/asn.git`
 `sudo apt -y install curl whois bind9-host mtr-tiny jq ipcalc grepcidr ncat aha`
 
 - Usage
@@ -103,9 +118,11 @@ Git clone https://github.com/nitefood/asn.git
 `./asn -n target IP`
 
 - GUI Tool
-- 
+
 https://bgp.he.net/
 https://bgpview.io
+
+
 
 5- ASN blocks discovery
 Finding ASN will help us identify netblocks of the domains.
@@ -121,11 +138,14 @@ Brute force, Google, VirusTotal, alt names, ASN discovery
 `sudo apt-get install amass`
 
 - Usage
+
 `amass enum -d target.com`
 
 GUI tool:
 
 http://bgp.he.net/
+
+
 
 6- Scrape Certificate Transparency Logs
 
@@ -146,6 +166,8 @@ https://github.com/UnaPibaGeek/ctfr
 GUI tool:
 https://crt.sh/
 
+
+
 7- Forwards DNS Bruteforcing on domain name (Subdomain Enumeration):
 To discover subdomains and it IP addresses.
 
@@ -158,10 +180,14 @@ Resolve live subdomain and get the IP addresses.
 https://github.com/Josue87/resolveDomains
 
 - Installation
+
 `git clone https://github.com/Josue87/resolveDomains.gitUsage`
 
 - Usage
+
 `./resolveDomains -d targetsubdomian.txt`
+
+
 
 8- Reverse DNS lookups for identified subnets (PTR Record)
 
@@ -171,10 +197,16 @@ Tool:
 Usage:
 `fierce –range x.x.x.x/xx`
 
+
+
 9- Search Engine Scraping / Dorking (Google/Bing/Yandex)
+
 Tool:
+
 **Sublist3r**
+
 - Description
+
 Baidu, Yahoo, Google, Bing, Ask, Netcraft, DNSdumpster, VirusTotal, Threat Crowd, SSL Certificates, PassiveDNS
 https://github.com/aboul3la/Sublist3r
 
@@ -194,10 +226,14 @@ Search engine
 `Find subsomains: site:*.target.com
 Find subdomains & exclude specific ones: site:*.target.com -site:www.target.com -site:help.target.com`
 
+
+
 10- Shodan Enumeration:
 
 The below link is helpful for the Shodan enumeration
 https://thedarksource.com/shodan-cheat-sheet 
+
+
 
 11- Wayback Machine
 Find forgotten domains/URLs
@@ -205,8 +241,12 @@ Find forgotten domains/URLs
 GUI tool:
 https://archive.org/web/
 
+
+
 12- Metadata Scraping 
 Try to find any metadata if all the founded/leaked files of the target.
+
+
 
 13- Static analysis of associated mobile applications 
 Search for the target if they have mobile app from all the stores. 
@@ -215,14 +255,18 @@ Tool:
 **Mobile Security Framework (MobSF)**
 https://github.com/MobSF/Mobile-Security-Framework-MobSF
 
+
+
 14- Social Media Scraping
 From the DNS lookup you might find emails for the owner or any contact of the target. Such as from the pervious tools or from the GUI.
+
 
 
 15- Passive DNS Recon 
 
 GUI tool:
 https://dnsdumpster.com/
+
 
 
 16- Github/Gitlab Enumeration
@@ -241,13 +285,14 @@ https://github.com/obheda12/GitDorker
 
 **All you need is to generate an API key from your GitHub account and store it in a specific file depend on the tool you choice.**
 
+
+
 17- Virtual Host Enumeration 
 Tool:
 
 **Virtual-host-discovery**
 - Description
-- 
-vhosts brute-force
+Expand the target by detecting old or deprecated code. It may also reveal hidden hosts that are statically mapped in the developer's `/etc/hosts` file.
 
 - Installation
 
@@ -257,6 +302,8 @@ vhosts brute-force
 - Usage
 
 `python3 sublist3r.py -d targets.com`
+
+
 
 18- Alterations & permutations of already known subdomains
 
@@ -281,6 +328,8 @@ Python 3:
 - Usage
 
 `altdns -i subdomains.txt -o data_output -w words.txt -r -s results_output.txt`
+
+
 
 19- TLD expansion
 Tool:
