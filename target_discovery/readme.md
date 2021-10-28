@@ -18,8 +18,31 @@ Gathering information without alerting the subject of the surveillance is passiv
 Note: there are various of tools and ways to discover each method.
 
 
-Methods:
+Methods List  | 
+------------- | 
+Obtains important DNS records that commonly used types | 
+Reverse DNS Lookup - PTR Record for main domain |
+Whois lookup domain name |
+Whois lookup IP address |
+ASN blocks discovery |
+Scrape Certificate Transparency Logs |
+Forwards DNS Bruteforcing on domain name (Subdomain Enumeration) |
+Reverse DNS lookups for identified subnets (PTR Record) |
+Search Engine Scraping / Dorking (Google/Bing/Yandex) |
+Shodan Enumeration |
+Wayback Machine |
+Metadata Scraping |
+Static analysis of associated mobile applications |
+Social Media Scraping |
+Passive DNS Recon |
+Github/Gitlab Enumeration |
+Virtual Host Enumeraton  |
+Alterations & permutations of already known subdomains |
+TLD expansion |
 
+
+
+Methods details:
 
 **1- Obtains important DNS records that commonly used types:**
 
