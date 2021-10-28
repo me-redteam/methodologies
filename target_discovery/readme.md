@@ -318,15 +318,15 @@ https://dnsdumpster.com/
 
 You can find leaked secrets of the target by using the GitHub/GitLab dorking form the below tool:
 
-https://github.com/hisxo/gitGraber
-https://github.com/eth0izzle/shhgit
-https://github.com/techgaun/githubdorks
-https://github.com/michenriksen/gitrob
-https://github.com/anshumanbh/git-all-secrets
-https://github.com/awslabs/git-secrets
-https://github.com/kootenpv/gittyleaks
-https://github.com/dxa4481/truffleHog
-https://github.com/obheda12/GitDorker
+https://github.com/hisxo/gitGraber |
+https://github.com/eth0izzle/shhgit |
+https://github.com/techgaun/githubdorks |
+https://github.com/michenriksen/gitrob |
+https://github.com/anshumanbh/git-all-secrets |
+https://github.com/awslabs/git-secrets |
+https://github.com/kootenpv/gittyleaks |
+https://github.com/dxa4481/truffleHog |
+https://github.com/obheda12/GitDorker |
 
 **All you need is to generate an API key from your GitHub account and store it in a specific file depend on the tool you choice.**
 
