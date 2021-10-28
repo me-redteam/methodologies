@@ -12,7 +12,7 @@ passive
 
 
 
-**Passive recon**
+## **Passive recon**
 
 Gathering information without alerting the subject of the surveillance is passive reconnaissance. This is the natural start of any reconnaissance because, once alerted, a target will likely react by drastically increasing security in anticipation of an attack. This is like casing a place prior to robbing it.
 
@@ -46,10 +46,10 @@ TLD expansion |
 
 
 
-Methods details:
+### Methods details:
 
 
-**1- Obtains important DNS records that commonly used types:**
+## **1- Obtains important DNS records that commonly used types:**
 
 - A (Host address)
 - AAAA (IPv6 host address)
@@ -76,7 +76,7 @@ Installed by default in Kali, otherwise:
 
 
 
-**2- Reverse DNS Lookup - PTR Record for main domain**
+## **2- Reverse DNS Lookup - PTR Record for main domain**
 
 The Reverse Lookup tool will do a reverse IP lookup. If you type in an IP address, we will attempt to locate a DNS PTR record for that IP address.
 
@@ -104,7 +104,7 @@ https://mxtoolbox.com/
 
 
 
-**3- Whois lookup domain name**
+## **3- Whois lookup domain name**
 
 WHOIS allows you to look up the name and contact information of whoever operates any website's generic domain name.
 
@@ -127,7 +127,7 @@ https://www.whois.com/whois/
 
 
 
-**4- Whois lookup IP address**
+## **4- Whois lookup IP address**
 
 IP WHOIS Lookup Tool offers a free IP Lookup Service to check who owns an IP address. 
 
@@ -158,7 +158,7 @@ https://bgpview.io
 
 
 
-**5- ASN blocks discovery**
+## **5- ASN blocks discovery**
 Finding ASN will help us identify netblocks of the domains.
 
 Tools:
@@ -182,7 +182,7 @@ http://bgp.he.net/
 
 
 
-**6- Scrape Certificate Transparency Logs**
+## **6- Scrape Certificate Transparency Logs**
 
 Enumerate subdomains using CT logs
 
@@ -204,7 +204,7 @@ https://crt.sh/
 
 
 
-**7- Forwards DNS Bruteforcing on domain name (Subdomain Enumeration):**
+## **7- Forwards DNS Bruteforcing on domain name (Subdomain Enumeration):**
 To discover subdomains and it IP addresses.
 
 Tool:
@@ -226,7 +226,7 @@ https://github.com/Josue87/resolveDomains
 
 
 
-**8- Reverse DNS lookups for identified subnets (PTR Record)**
+## **8- Reverse DNS lookups for identified subnets (PTR Record)**
 
 Tool:
 
@@ -238,7 +238,7 @@ Tool:
 
 
 
-**9- Search Engine Scraping / Dorking (Google/Bing/Yandex)**
+## **9- Search Engine Scraping / Dorking (Google/Bing/Yandex)**
 Tool:
 
 **Sublist3r**
@@ -267,7 +267,7 @@ Find subdomains & exclude specific ones: site:*.target.com -site:www.target.com 
 
 
 
-**10- Shodan Enumeration:**
+## **10- Shodan Enumeration:**
 
 The below link is helpful for the Shodan enumeration
 https://thedarksource.com/shodan-cheat-sheet 
@@ -276,7 +276,7 @@ https://thedarksource.com/shodan-cheat-sheet
 
 
 
-**11- Wayback Machine**
+## **11- Wayback Machine**
 Find forgotten domains/URLs
 
 GUI tool:
@@ -285,13 +285,13 @@ https://archive.org/web/
 
 
 
-**12- Metadata Scraping** 
+## **12- Metadata Scraping** 
 Try to find any metadata if all the founded/leaked files of the target.
 
 
 
 
-**13- Static analysis of associated mobile applications**
+## **13- Static analysis of associated mobile applications**
 Search for the target if they have mobile app from all the stores. 
 Tool:
 
@@ -301,14 +301,14 @@ https://github.com/MobSF/Mobile-Security-Framework-MobSF
 
 
 
-**14- Social Media Scraping**
+## **14- Social Media Scraping**
 
 From the DNS lookup you might find emails for the owner or any contact of the target. Such as from the pervious tools or from the GUI.
 
 
 
 
-**15- Passive DNS Recon** 
+## **15- Passive DNS Recon** 
 
 GUI tool:
 https://dnsdumpster.com/
@@ -316,7 +316,7 @@ https://dnsdumpster.com/
 
 
 
-**16- Github/Gitlab Enumeration**
+## **16- Github/Gitlab Enumeration**
 
 You can find leaked secrets of the target by using the GitHub/GitLab dorking form the below tool:
 
@@ -335,7 +335,7 @@ https://github.com/obheda12/GitDorker |
 
 
 
-**17- Virtual Host Enumeration** 
+## **17- Virtual Host Enumeration** 
 Tool:
 
 **Virtual-host-discovery**
@@ -354,7 +354,7 @@ Expand the target by detecting old or deprecated code. It may also reveal hidden
 
 
 
-**18- Alterations & permutations of already known subdomains**
+## **18- Alterations & permutations of already known subdomains**
 
 Tool:
 
@@ -381,7 +381,7 @@ Python 3:
 
 
 
-**19- TLD expansion**
+## **19- TLD expansion**
 
 Tool:
 
