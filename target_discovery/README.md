@@ -19,6 +19,28 @@ Gathering information without alerting the subject of the surveillance is passiv
 
 **Note: there are various of tools and ways to discover each method.**
 
+* [Passive Target Discovery](#passive-target-discovery)
+   * [<strong>Passive recon</strong>](#passive-recon)
+      * [Methods details:](#methods-details)
+   * [<strong>1- Obtains important DNS records that commonly used types:</strong>](#1--obtains-important-dns-records-that-commonly-used-types)
+   * [<strong>2- Reverse DNS Lookup - PTR Record for main domain</strong>](#2--reverse-dns-lookup---ptr-record-for-main-domain)
+   * [<strong>3- Whois lookup domain name</strong>](#3--whois-lookup-domain-name)
+   * [<strong>4- Whois lookup IP address</strong>](#4--whois-lookup-ip-address)
+   * [<strong>5- ASN blocks discovery</strong>](#5--asn-blocks-discovery)
+   * [<strong>6- Scrape Certificate Transparency Logs</strong>](#6--scrape-certificate-transparency-logs)
+   * [<strong>7- Forwards DNS Bruteforcing on domain name (Subdomain Enumeration):</strong>](#7--forwards-dns-bruteforcing-on-domain-name-subdomain-enumeration)
+   * [<strong>8- Reverse DNS lookups for identified subnets (PTR Record)</strong>](#8--reverse-dns-lookups-for-identified-subnets-ptr-record)
+   * [<strong>9- Search Engine Scraping / Dorking (Google/Bing/Yandex)</strong>](#9--search-engine-scraping--dorking-googlebingyandex)
+   * [<strong>10- Shodan Enumeration:</strong>](#10--shodan-enumeration)
+   * [<strong>11- Wayback Machine</strong>](#11--wayback-machine)
+   * [<strong>12- Metadata Scraping</strong>](#12--metadata-scraping)
+   * [<strong>13- Static analysis of associated mobile applications</strong>](#13--static-analysis-of-associated-mobile-applications)
+   * [<strong>14- Social Media Scraping</strong>](#14--social-media-scraping)
+   * [<strong>15- Passive DNS Recon</strong>](#15--passive-dns-recon)
+   * [<strong>16- Github/Gitlab Enumeration</strong>](#16--githubgitlab-enumeration)
+   * [<strong>17- Virtual Host Enumeration</strong>](#17--virtual-host-enumeration)
+   * [<strong>18- Alterations &amp; permutations of already known subdomains</strong>](#18--alterations--permutations-of-already-known-subdomains)
+   * [<strong>19- TLD expansion</strong>](#19--tld-expansion)
 
 
 Methods List  | 
