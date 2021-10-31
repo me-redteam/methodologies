@@ -96,7 +96,7 @@ Installed by default on Kali
 - Usage:
 
 ```
-fierce –domain target.com
+fierce --domain target.com
 ```
 
 GUI tool:
