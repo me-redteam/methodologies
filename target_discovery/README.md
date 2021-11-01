@@ -260,7 +260,7 @@ Tool:
 - Usage:
 
 ```
-fierce –range x.x.x.x/xx
+fierce --range x.x.x.x/xx
 ```
 
 
