@@ -81,13 +81,7 @@ The Reverse Lookup tool will do a reverse IP lookup. If you type in an IP addres
 Tool: 
 
 
-**Fierce**
-
-- Description
-
-AXFR, brute force, reverse DNS
-
-https://github.com/bbhunter/fierce-domain-scanner 
+**Dig**
  
 - Installation:
 
@@ -96,7 +90,7 @@ Installed by default on Kali
 - Usage:
 
 ```
-fierce --domain target IP
+dig +noall +answer -x target IP
 ```
 
 GUI tool:
