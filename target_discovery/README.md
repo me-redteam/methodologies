@@ -188,7 +188,7 @@ sudo apt-get install amass
 - Usage
 
 ```
-amass enum -d target.com
+amass intel -asn "ASN"
 ```
 
 GUI tool:
@@ -423,16 +423,14 @@ Expand the target by detecting old or deprecated code. It may also reveal hidden
 - Installation
 
 ```
-git clone https://github.com/aboul3la/Sublist3r.git
+ap-get install hosthunter
 ```
-```
-pip install -r requirements.txt
-```
+
 
 - Usage
 
 ```
-python3 sublist3r.py -d target.com
+hosthunter targetsIP.txt --output result.txt
 ```
 
 
