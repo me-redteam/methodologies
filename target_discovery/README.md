@@ -161,7 +161,7 @@ https://bgpview.io
 
 
 ## **5- ASN blocks discovery**
-Finding ASN will help us identify netblocks of the domains.
+Finding ASN will help to identify netblocks of the domains.
 
 Tools:
 
@@ -287,6 +287,7 @@ git clone https://github.com/Josue87/resolveDomains.git
 
 
 ## **9- Reverse DNS lookups for identified subnets (PTR Record)**
+it will help to identify the domains from the target subnet.
 
 Tool:
 
@@ -301,6 +302,8 @@ fierce --range x.x.x.x/xx
 
 
 ## **10- Search Engine Scraping / Dorking (Google/Bing/Yandex)**
+Scraping from the search engines help to discover sensitive information which it will help for the next hacking phase.
+
 
 Tool:
 
@@ -341,7 +344,7 @@ Find subdomains & exclude specific ones: site:*.target.com -site:www.target.com 
 
 ## **11- Shodan Enumeration:**
 
-The below link is helpful for the Shodan enumeration
+Enumerate the target assests from the Shodan will help to gather information, from The below link it will be helpful for the Shodan enumeration
 https://thedarksource.com/shodan-cheat-sheet 
 
 
