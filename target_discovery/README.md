@@ -259,7 +259,7 @@ apt-get install subfinder
 subfinder -d target.com
 ```
 
-## **8- Forwards DNS Bruteforcing on subdomain name:**
+## **8- Forwards DNS Bruteforcing For the Subdomains:**
 To find the discovered subdomains IP addresses.
 
 Tool:
