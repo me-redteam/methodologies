@@ -260,7 +260,7 @@ subfinder -d target.com
 ```
 
 ## **8- Forwards DNS Bruteforcing on subdomain name:**
-To discover subdomains and it IP addresses.
+To find the discovered subdomains IP addresses.
 
 Tool:
 
@@ -327,7 +327,7 @@ pip install -r requirements.txt
 python3 sublist3r.py -d targets.com
 ```
 -d flag in the **Sublist3r** command-line means for the scraping.
-and if you want you can add the flag -b for the brute-force.
+and if you want to brute-force you can add the flag -b.
 
 **Google**
 Search engine
