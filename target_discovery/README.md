@@ -212,10 +212,53 @@ python3 ctfr.py -d target.com
 GUI tool:
 https://crt.sh/
 
+## **7- Subdomains Enmuration:**
+Sub-domain enumeration is the process of finding sub-domains for one or more domains. It helps to broader the attack surface, find hidden applications, and forgotten subdomains
 
+**Note that there are varios of tools to use for the subdomains enum**
 
+Tools: 
+**amass**
 
-## **7- Forwards DNS Bruteforcing on domain name (Subdomain Enumeration):**
+- Installation
+
+```
+apt-get install amass
+```
+
+- Usage
+
+```
+amass enum -passive -d target.com
+```
+
+**assetfinder**
+
+- Installation
+
+```
+apt-get install assetfinder
+```
+
+- Usage
+
+```
+assetfinder -subs-only target.com
+```
+
+**subfinder**
+
+- Installation
+```
+apt-get install subfinder
+```
+
+- Usage
+```
+subfinder -d target.com
+```
+
+## **8- Forwards DNS Bruteforcing on subdomain name:**
 To discover subdomains and it IP addresses.
 
 Tool:
@@ -230,7 +273,7 @@ https://github.com/Josue87/resolveDomains
 - Installation
 
 ```
-git clone https://github.com/Josue87/resolveDomains.gitUsage
+git clone https://github.com/Josue87/resolveDomains.git
 ```
 
 - Usage
@@ -242,7 +285,7 @@ git clone https://github.com/Josue87/resolveDomains.gitUsage
 
 
 
-## **8- Reverse DNS lookups for identified subnets (PTR Record)**
+## **9- Reverse DNS lookups for identified subnets (PTR Record)**
 
 Tool:
 
@@ -256,7 +299,7 @@ fierce --range x.x.x.x/xx
 
 
 
-## **9- Search Engine Scraping / Dorking (Google/Bing/Yandex)**
+## **10- Search Engine Scraping / Dorking (Google/Bing/Yandex)**
 
 Tool:
 
@@ -282,6 +325,8 @@ pip install -r requirements.txt
 ```
 python3 sublist3r.py -d targets.com
 ```
+-d flag in the **Sublist3r** command-line means for the scraping.
+and if you want you can add the flag -b for the brute-force.
 
 **Google**
 Search engine
@@ -293,7 +338,7 @@ Find subdomains & exclude specific ones: site:*.target.com -site:www.target.com 
 
 
 
-## **10- Shodan Enumeration:**
+## **11- Shodan Enumeration:**
 
 The below link is helpful for the Shodan enumeration
 https://thedarksource.com/shodan-cheat-sheet 
@@ -302,8 +347,9 @@ https://thedarksource.com/shodan-cheat-sheet
 
 
 
-## **11- Wayback Machine**
+## **12- Wayback Machine**
 Find forgotten domains/URLs
+
 
 GUI tool:
 
@@ -312,13 +358,13 @@ https://archive.org/web/
 
 
 
-## **12- Metadata Scraping** 
+## **13- Metadata Scraping** 
 Try to find any metadata of the founded/leaked files of the target.
 
 
 
 
-## **13- Static analysis of associated mobile applications**
+## **14- Static analysis of associated mobile applications**
 Search for the target if they have mobile app from all the stores. 
 Tool:
 
@@ -329,14 +375,18 @@ https://github.com/MobSF/Mobile-Security-Framework-MobSF
 
 
 
-## **14- Social Media Scraping**
+## **15- Social Media Scraping**
+
+Social Media Scraping help to get the targets emails to use it for the next phase. 
 
 From the DNS lookup you might find emails for the owner or any contact of the target. Such as from the pervious tools or from the GUI.
 
 
 
 
-## **15- Passive DNS Recon** 
+## **16- Passive DNS Recon** 
+
+Passive DNS helps to discover hosts related to a domain. Finding visible hosts from the attackers perspective is an important part of the security assessment process.
 
 GUI tool:
 
@@ -345,7 +395,7 @@ https://dnsdumpster.com/
 
 
 
-## **16- Github/Gitlab Enumeration**
+## **17- Github/Gitlab Enumeration**
 
 You can find leaked secrets of the target by using the GitHub/GitLab dorking form the below tool:
 
@@ -403,7 +453,7 @@ python3 gitGraber.py -k wordlists/keywords.txt -q "target.com"
 ```
 
 
-## **17- Virtual Host Enumeration** 
+## **18- Virtual Host Enumeration** 
 Tool:
 
 **Virtual-host-discovery**
@@ -426,11 +476,12 @@ hosthunter targetsIP.txt --output result.txt
 
 
 
-## **18- Alterations & permutations of already known subdomains**
+## **19- Alterations & permutations of already known subdomains**
 
 Tool:
 
 **AltDNS**
+
 - Description
 Subdomain discovery through alterations and permutations
 
@@ -456,13 +507,13 @@ pip3 install py-altdns==1.0.2
 - Usage
 
 ```
-altdns -i subdomains.txt -o data_output -w words.txt -r -s results_output.txt
+altdns -i subdomains.txt -o data_output -w words.txt 
 ```
 
 
 
 
-## **19- TLD expansion**
+## **20- TLD expansion**
 
 Tool:
 
