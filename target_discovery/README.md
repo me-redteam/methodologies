@@ -423,7 +423,7 @@ Expand the target by detecting old or deprecated code. It may also reveal hidden
 - Installation
 
 ```
-ap-get install hosthunter
+apt-get install hosthunter
 ```
 
 
