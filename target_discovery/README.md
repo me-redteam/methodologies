@@ -13,7 +13,7 @@ passive
 
 ## **Passive recon**
 
-Gathering information without alerting the subject of the surveillance is passive reconnaissance. This is the natural start of any reconnaissance because, once alerted, a target will likely react by drastically increasing security in anticipation of an attack. This is like casing a place prior to robbing it.
+Gathering information without alerting the subject of the surveillance is passive reconnaissance. This is the natural start of any reconnaissance because, once alerted, a target will likely react by drastically increasing security in anticipation of an attack.
 
 
 
@@ -82,10 +82,6 @@ Tool:
 
 
 **Dig**
- 
-- Installation:
-
-Installed by default on Kali
 
 - Usage:
 
@@ -143,7 +139,7 @@ https://github.com/nitefood/asn
 - Installation
 
 ```
-Git clone https://github.com/nitefood/asn.git
+git clone https://github.com/nitefood/asn.git
 ```
 ```
 sudo apt -y install curl whois bind9-host mtr-tiny jq ipcalc grepcidr ncat aha
