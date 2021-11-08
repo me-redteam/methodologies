@@ -254,7 +254,7 @@ Tool:
 fierce --subdomain-file *wordlists* --domain target.com
 ```
 
-##**9- Resolve the IP Address of the Discoverd Subdomains:**
+## **9- Resolve the IP Address of the Discoverd Subdomains**
 Resolve live subdomain and get the IP addresses.
 
 **resolveDomains**
