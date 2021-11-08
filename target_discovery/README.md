@@ -20,26 +20,7 @@ Gathering information without alerting the subject of the surveillance is passiv
 **Note: there are various of tools and ways to discover each method.**
 ## Methods
 
-   * [<strong>1- Obtains important DNS records that commonly used types:</strong>](#1--obtains-important-dns-records-that-commonly-used-types)
-   * [<strong>2- Reverse DNS Lookup - PTR Record for main domain</strong>](#2--reverse-dns-lookup---ptr-record-for-main-domain)
-   * [<strong>3- Whois lookup domain name</strong>](#3--whois-lookup-domain-name)
-   * [<strong>4- Whois lookup IP address</strong>](#4--whois-lookup-ip-address)
-   * [<strong>5- ASN blocks discovery</strong>](#5--asn-blocks-discovery)
-   * [<strong>6- Scrape Certificate Transparency Logs</strong>](#6--scrape-certificate-transparency-logs)
-   * [<strong>7- Subdomains Enumeration:</strong>](#7--subdomains-enumeration)
-   * [<strong>8- Forwards DNS Bruteforcing on subdomain name:</strong>](#8--forwards-dns-bruteforcing-on-subdomain-name)
-   * [<strong>9- Reverse DNS lookups for identified subnets (PTR Record)</strong>](#9--reverse-dns-lookups-for-identified-subnets-ptr-record)
-   * [<strong>10- Search Engine Scraping / Dorking (Google/Bing/Yandex)</strong>](#10--search-engine-scraping--dorking-googlebingyandex)
-   * [<strong>11- Shodan Enumeration:</strong>](#11--shodan-enumeration)
-   * [<strong>12- Wayback Machine</strong>](#12--wayback-machine)
-   * [<strong>13- Metadata Scraping</strong>](#13--metadata-scraping)
-   * [<strong>14- Static analysis of associated mobile applications</strong>](#14--static-analysis-of-associated-mobile-applications)
-   * [<strong>15- Social Media Scraping</strong>](#15--social-media-scraping)
-   * [<strong>16- Passive DNS Recon</strong>](#16--passive-dns-recon)
-   * [<strong>17- Github/Gitlab Enumeration</strong>](#17--githubgitlab-enumeration)
-   * [<strong>18- Virtual Host Enumeration</strong>](#18--virtual-host-enumeration)
-   * [<strong>19- Alterations &amp; permutations of already known subdomains</strong>](#19--alterations--permutations-of-already-known-subdomains)
-   * [<strong>20- TLD expansion</strong>](#20--tld-expansion)
+
 
 
 
