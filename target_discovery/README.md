@@ -26,7 +26,7 @@ Gathering information without alerting the subject of the surveillance is passiv
    * [<strong>4- Whois lookup IP address</strong>](#4--whois-lookup-ip-address)
    * [<strong>5- ASN blocks discovery</strong>](#5--asn-blocks-discovery)
    * [<strong>6- Scrape Certificate Transparency Logs</strong>](#6--scrape-certificate-transparency-logs)
-   * [<strong>7- Subdomains Enmuration:</strong>](#7--subdomains-enmuration)
+   * [<strong>7- Subdomains Enumeration:</strong>](#7--subdomains-enumeration)
    * [<strong>8- Forwards DNS Bruteforcing on subdomain name:</strong>](#8--forwards-dns-bruteforcing-on-subdomain-name)
    * [<strong>9- Reverse DNS lookups for identified subnets (PTR Record)</strong>](#9--reverse-dns-lookups-for-identified-subnets-ptr-record)
    * [<strong>10- Search Engine Scraping / Dorking (Google/Bing/Yandex)</strong>](#10--search-engine-scraping--dorking-googlebingyandex)
@@ -213,7 +213,7 @@ python3 ctfr.py -d target.com
 GUI tool:
 https://crt.sh/
 
-## **7- Subdomains Enmuration:**
+## **7- Subdomains Enumeration:**
 Sub-domain enumeration is the process of finding sub-domains for one or more domains. It helps to broader the attack surface, find hidden applications, and forgotten subdomains
 
 **Note that there are varios of tools to use for the subdomains enum**
