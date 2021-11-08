@@ -260,14 +260,23 @@ subfinder -d target.com
 ```
 
 ## **8- Forwards DNS Bruteforcing For the Subdomains:**
-To find the discovered subdomains IP addresses.
+Brute-force the discoverd subdomains to get the forward DNS using a wordlist.
 
 Tool:
 
+**fierce**
+
+- Usage
+
+```
+fierce --subdomain-file /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-5000.txt --domain
+```
+
+##**9- Resolve the IP Address of the Discoverd Subdomains:**
+Resolve live subdomain and get the IP addresses.
+
 **resolveDomains**
 - Description
-
-Resolve live subdomain and get the IP addresses.
 
 https://github.com/Josue87/resolveDomains
 
@@ -286,7 +295,7 @@ git clone https://github.com/Josue87/resolveDomains.git
 
 
 
-## **9- Reverse DNS lookups for identified subnets (PTR Record)**
+## **10- Reverse DNS lookups for identified subnets (PTR Record)**
 it will help to identify the domains from the target subnet.
 
 Tool:
@@ -301,7 +310,7 @@ fierce --range x.x.x.x/xx
 
 
 
-## **10- Search Engine Scraping / Dorking (Google/Bing/Yandex)**
+## **11- Search Engine Scraping / Dorking (Google/Bing/Yandex)**
 Scraping from the search engines help to discover sensitive information which it will help for the next hacking phase.
 
 
@@ -342,7 +351,7 @@ Find subdomains & exclude specific ones: site:*.target.com -site:www.target.com 
 
 
 
-## **11- Shodan Enumeration:**
+## **12- Shodan Enumeration:**
 
 Enumerate the target assests from the Shodan will help to gather information, from The below link it will be helpful for the Shodan enumeration
 https://thedarksource.com/shodan-cheat-sheet 
@@ -351,7 +360,7 @@ https://thedarksource.com/shodan-cheat-sheet
 
 
 
-## **12- Wayback Machine**
+## **13- Wayback Machine**
 Find forgotten domains/URLs
 
 
@@ -362,13 +371,13 @@ https://archive.org/web/
 
 
 
-## **13- Metadata Scraping** 
+## **14- Metadata Scraping** 
 Try to find any metadata of the founded/leaked files of the target.
 
 
 
 
-## **14- Static analysis of associated mobile applications**
+## **15- Static analysis of associated mobile applications**
 Search for the target if they have mobile app from all the stores. 
 Tool:
 
@@ -379,7 +388,7 @@ https://github.com/MobSF/Mobile-Security-Framework-MobSF
 
 
 
-## **15- Social Media Scraping**
+## **16- Social Media Scraping**
 
 Social Media Scraping help to get the targets emails to use it for the next phase. 
 
@@ -388,7 +397,7 @@ From the DNS lookup you might find emails for the owner or any contact of the ta
 
 
 
-## **16- Passive DNS Recon** 
+## **17- Passive DNS Recon** 
 
 Passive DNS helps to discover hosts related to a domain. Finding visible hosts from the attackers perspective is an important part of the security assessment process.
 
@@ -399,7 +408,7 @@ https://dnsdumpster.com/
 
 
 
-## **17- Github/Gitlab Enumeration**
+## **18- Github/Gitlab Enumeration**
 
 You can find leaked secrets of the target by using the GitHub/GitLab dorking form the below tool:
 
@@ -457,7 +466,7 @@ python3 gitGraber.py -k wordlists/keywords.txt -q "target.com"
 ```
 
 
-## **18- Virtual Host Enumeration** 
+## **19- Virtual Host Enumeration** 
 Tool:
 
 **Virtual-host-discovery**
@@ -480,7 +489,7 @@ hosthunter targetsIP.txt --output result.txt
 
 
 
-## **19- Alterations & permutations of already known subdomains**
+## **20- Alterations & permutations of already known subdomains**
 
 Tool:
 
@@ -511,13 +520,12 @@ pip3 install py-altdns==1.0.2
 - Usage
 
 ```
-altdns -i subdomains.txt -o data_output -w words.txt 
+altdns -i subdomains.txt -o data_output -w words.txt -r -s results_output.tx
 ```
 
 
 
-
-## **20- TLD expansion**
+## **21- TLD expansion**
 
 Tool:
 
