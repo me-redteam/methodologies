@@ -31,7 +31,7 @@ Gathering information without alerting the subject of the surveillance is passiv
    * [<strong>9- Resolve the IP Address of the Discoverd Subdomains</strong>](#9--resolve-the-ip-address-of-the-discoverd-subdomains)
    * [<strong>10- Reverse DNS lookups for identified subnets (PTR Record)</strong>](#10--reverse-dns-lookups-for-identified-subnets-ptr-record)
    * [<strong>11- Search Engine Scraping / Dorking (Google/Bing/Yandex)</strong>](#11--search-engine-scraping--dorking-googlebingyandex)
-   * [<strong>12- Shodan Enumeration:</strong>](#12--shodan-enumeration)
+   * [<strong>12- Shodan Enumeration</strong>](#12--shodan-enumeration)
    * [<strong>13- Wayback Machine</strong>](#13--wayback-machine)
    * [<strong>14- Metadata Scraping</strong>](#14--metadata-scraping)
    * [<strong>15- Static analysis of associated mobile applications</strong>](#15--static-analysis-of-associated-mobile-applications)
@@ -354,7 +354,7 @@ Find subdomains & exclude specific ones: site:*.target.com -site:www.target.com 
 
 
 
-## **12- Shodan Enumeration:**
+## **12- Shodan Enumeration**
 
 Enumerate the target assests from the Shodan will help to gather information, from The below link it will be helpful for the Shodan enumeration
 https://thedarksource.com/shodan-cheat-sheet 
