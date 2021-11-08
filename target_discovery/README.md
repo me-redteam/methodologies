@@ -271,7 +271,7 @@ Tool:
 - Usage
 
 ```
-fierce --subdomain-file /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-5000.txt --domain
+fierce --subdomain-file *wordlists* --domain target.com
 ```
 
 ##**9- Resolve the IP Address of the Discoverd Subdomains:**
