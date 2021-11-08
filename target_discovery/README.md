@@ -21,6 +21,27 @@ Gathering information without alerting the subject of the surveillance is passiv
 ## Methods
 
 
+   * [<strong>1- Obtains important DNS records that commonly used types:</strong>](#1--obtains-important-dns-records-that-commonly-used-types)
+   * [<strong>2- Reverse DNS Lookup - PTR Record for main domain</strong>](#2--reverse-dns-lookup---ptr-record-for-main-domain)
+   * [<strong>3- Whois lookup domain name</strong>](#3--whois-lookup-domain-name)
+   * [<strong>4- Whois lookup IP address</strong>](#4--whois-lookup-ip-address)
+   * [<strong>5- ASN blocks discovery</strong>](#5--asn-blocks-discovery)
+   * [<strong>6- Scrape Certificate Transparency Logs</strong>](#6--scrape-certificate-transparency-logs)
+   * [<strong>7- Subdomains Enumeration</strong>](#7--subdomains-enumeration)
+   * [<strong>8- Forwards DNS Bruteforcing For the Subdomains</strong>](#8--forwards-dns-bruteforcing-for-the-subdomains)
+   * [<strong>10- Reverse DNS lookups for identified subnets (PTR Record)</strong>](#10--reverse-dns-lookups-for-identified-subnets-ptr-record)
+   * [<strong>11- Search Engine Scraping / Dorking (Google/Bing/Yandex)</strong>](#11--search-engine-scraping--dorking-googlebingyandex)
+   * [<strong>12- Shodan Enumeration:</strong>](#12--shodan-enumeration)
+   * [<strong>13- Wayback Machine</strong>](#13--wayback-machine)
+   * [<strong>14- Metadata Scraping</strong>](#14--metadata-scraping)
+   * [<strong>15- Static analysis of associated mobile applications</strong>](#15--static-analysis-of-associated-mobile-applications)
+   * [<strong>16- Social Media Scraping</strong>](#16--social-media-scraping)
+   * [<strong>17- Passive DNS Recon</strong>](#17--passive-dns-recon)
+   * [<strong>18- Github/Gitlab Enumeration</strong>](#18--githubgitlab-enumeration)
+   * [<strong>19- Virtual Host Enumeration</strong>](#19--virtual-host-enumeration)
+   * [<strong>20- Alterations &amp; permutations of already known subdomains</strong>](#20--alterations--permutations-of-already-known-subdomains)
+   * [<strong>21- TLD expansion</strong>](#21--tld-expansion)
+
 
 
 
@@ -194,7 +215,7 @@ python3 ctfr.py -d target.com
 GUI tool:
 https://crt.sh/
 
-## **7- Subdomains Enumeration:**
+## **7- Subdomains Enumeration**
 Sub-domain enumeration is the process of finding sub-domains for one or more domains. It helps to broader the attack surface, find hidden applications, and forgotten subdomains
 
 **Note that there are varios of tools to use for the subdomains enum**
@@ -240,7 +261,7 @@ apt-get install subfinder
 subfinder -d target.com
 ```
 
-## **8- Forwards DNS Bruteforcing For the Subdomains:**
+## **8- Forwards DNS Bruteforcing For the Subdomains**
 Brute-force the discoverd subdomains to get the forward DNS using a wordlist.
 
 Tool:
