@@ -292,7 +292,7 @@ git clone https://github.com/Josue87/resolveDomains.git
 - Usage
 
 ```
-./resolveDomains -d targetsubdomian.txt
+./resolveDomains -d targetsubdomian.txt > resolved.txt
 ```
 
 
