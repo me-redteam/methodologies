@@ -16,7 +16,6 @@ passive
 Gathering information without alerting the subject of the surveillance is passive reconnaissance. This is the natural start of any reconnaissance because, once alerted, a target will likely react by drastically increasing security in anticipation of an attack.
 
 
-
 **Note: there are various of tools and ways to discover each method.**
 ## Methods
 
