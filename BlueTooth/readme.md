@@ -97,3 +97,5 @@ https://shop.hak5.org/products/ubertooth-one
 https://hackerwarehouse.com/product/ubertooth-one/ 
 
 https://alexnld.com/product/ubertooth-one-2-4-ghz-wireless-development-bluetooth-btle-tool-bluetooth-protocol-analysis-open-source/?gclid=CjwKCAjwlcaRBhBYEiwAK341jSohBaTxUMfRVrei2txFu09_M9jH0Z7unOtMqG6Ru1Db0KDVy8-ouxoC1oAQAvD_BwE
+
+https://ubertooth.readthedocs.io/en/latest/index.html
