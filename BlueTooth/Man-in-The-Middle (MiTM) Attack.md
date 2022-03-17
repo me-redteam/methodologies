@@ -141,19 +141,3 @@ Figure: MiTM Attack - Command line view
 * https://github.com/sandeepmistry/noble 
 * https://github.com/sandeepmistry/bleno 
 * http://www.smartlockpicking.com/hackmelock/ 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
