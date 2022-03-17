@@ -67,33 +67,53 @@ Step 3: Scan for devices
 Phase 1: Running ws-slave on Raspberry Pi
 
 `sudo node ws-slave.js`
+
 ![image](https://user-images.githubusercontent.com/48615614/158759100-a11b1d6e-a524-4ff3-8724-485b390b0f84.png)
 
+Figure: Running ws-slave on Raspberry Pi
 
+Phase 2: Scan for advertisements on Kali
+`node scan.js` (without parameter, it will listen for all advertisements)
 
+![image](https://user-images.githubusercontent.com/48615614/158760304-2bf47e57-f10c-4c19-aab2-074cdb349905.png)
 
+Figure: Running scan for advertisements on Kali
 
+![image](https://user-images.githubusercontent.com/48615614/158760356-848d843d-6085-4bed-84a8-3e579717ad08.png)
 
+Figure: BLE traffic passing through Raspberry Pi (Client)
 
+Phase 3: Scan target device for Characteristics
+All the advertisements and services will be stored in `json` format inside `devices/` directory.
+`node scan.js <target_mac_address>`
 
+![image](https://user-images.githubusercontent.com/48615614/158760536-b29e5434-6bb0-4f02-8089-fe2d7c27fc81.png)
 
+Figure: Running scan for specific target on Kali Linux
 
+![image](https://user-images.githubusercontent.com/48615614/158760684-1eec28bd-bfc5-43da-a029-4685fa5e7d61.png)
 
+Figure: BLE traffic from Kali Linux through Raspberry Pi
 
+Step 4: Advertise
+Once all the advertisements and services are collected from Original Peripheral, Kali Linux will be used to advertise
 
+Same packets but with a faster rate than the original peripheral device. When the central device receives the first
+packets from clone device, it starts interpreting and considered as intended device.
+`./mac_adv -a devices/<peripheral_advertisements>.adv.json -s devices/<target_services>.srv.json`
 
+![image](https://user-images.githubusercontent.com/48615614/158760929-c5eb75c5-d88a-4673-a470-0c9a83f1baaf.png)
 
+Figure: Advertisements from Kali Linux
 
+Re-plug the adapter after changing MAC address.
 
+![image](https://user-images.githubusercontent.com/48615614/158761003-d9de4cd0-07b8-41a2-9983-0dc3830a4997.png)
 
+Figure: Kali Linux as Smart Peripheral Device and waiting for connection
 
+Step 5: Disconnect the Mobile app and again scan for BLE devices
 
+![image](https://user-images.githubusercontent.com/48615614/158761087-32d99bda-9503-489f-b607-22e54151154a.png)
 
-
-
-
-
-
-
-
-
+Figure: DVPD App Scanning for BLE device
