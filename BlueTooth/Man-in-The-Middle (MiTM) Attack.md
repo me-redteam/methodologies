@@ -117,3 +117,43 @@ Step 5: Disconnect the Mobile app and again scan for BLE devices
 ![image](https://user-images.githubusercontent.com/48615614/158761087-32d99bda-9503-489f-b607-22e54151154a.png)
 
 Figure: DVPD App Scanning for BLE device
+
+Step 6: Active Eavesdropping
+Once the central device initiates connection, all the BLE communication intended for the peripheral device can be seen on screen.
+
+![image](https://user-images.githubusercontent.com/48615614/158761433-17340eb8-cab8-45cf-a7ff-c0427ac11017.png)
+
+Figure: BLE traffic from/to Central device to/from Peripheral
+
+All the BLE communication intended for the original peripheral from the central device will be accepted by Kali Linux (Smart Device Clone) and sent to Raspberry Pi (Client Clone), then from Raspberry Pi it will reach the original peripheral device, and vice-versa.
+
+![image](https://user-images.githubusercontent.com/48615614/158761513-8f6d95bd-48ba-4421-8f5f-3e2020941901.png)
+
+Figure: MiTM Attack - Command line view
+
+## References:
+* https://en.wikipedia.org/wiki/Bluetooth_Low_Energy 
+* http://www.gattack.io/# 
+* https://eewiki.net/display/Wireless/A+Basic+Introduction+to+BLE+Security 
+* https://conference.hitb.org/hitbsecconf2017ams/materials/D2T3%20-%20Slawomir%20Jasek%20-%20Blue%20Picking%20-%20Hacking%20Bluetooth%20Smart%20Locks.pdf 
+* https://github.com/ji2kumar/dvpd 
+* https://github.com/0ddblade/dvpd 
+* https://github.com/sandeepmistry/noble 
+* https://github.com/sandeepmistry/bleno 
+* http://www.smartlockpicking.com/hackmelock/ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
