@@ -34,6 +34,8 @@ This kind of attack is called bluebugging because it resembles the way one might
 BlueBorne Explained: How The Attack Vector Works
 The BlueBorne attack vector has several stages. First, the attacker locates active Bluetooth connections around him or her. Devices can be identified even if they are not set to “discoverable” mode. Next, the attacker obtains the device’s MAC address, which is a unique identifier of that specific device. By probing the device, the attacker can determine which operating system his victim is using, and adjust his exploit accordingly. The attacker will then exploit a vulnerability in the implementation of the Bluetooth protocol in the relevant platform and gain the access he needs to act on his malicious objective. At this stage the attacker can choose to create a Man-in-The-Middle attack and control the device’s communication, or take full control over the device and use it for a wide array of cybercriminal purposes.
 
+https://www.youtube.com/watch?v=Az-l90RCns8
+
 ### Bluewave Zero-Click Bugs (Under research)
 ### BlueFrag leak (Under research)
 
