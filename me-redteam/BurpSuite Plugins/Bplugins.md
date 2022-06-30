@@ -121,7 +121,6 @@
       - It is possible to click on a specific URL and see the original/modified/unauthenticated request/response in order to investigate the differences.
       - Also check below URL : 
         - https://blog.yeswehack.com/yeswerhackers/pimpmyburp-pwnfox-autorize-find-idor/
-        - 
   ---
   + Burp Bounty
 
