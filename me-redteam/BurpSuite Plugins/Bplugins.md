@@ -223,16 +223,6 @@
     + How to Use :
       - Once you've loaded the plugin , Run active scan
   ---
-  + web cache deception scanner
-
-    + Introduction :
-      - A Burp extension to test applications for vulnerability to the Web Cache Deception attack.
-    + Installation Steps : 
-      - You can intsall it from burp extender
-     + How to Use :
-       - On the Target >>> Site map >>> right click on the request or on all the target you want attack
-       - Extensions >>> web cache deception scanner >>> web cache deception test
-  ---
   + OAUTHScan
 
     + Introduction :
