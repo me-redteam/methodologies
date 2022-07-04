@@ -205,15 +205,6 @@
     + How to Use :
       - Once you've loaded the plugin , it will	work in the background on the identified scope 
    ---
-  + PHP Object Injection 
-
-    + Introduction : 
-      - This extension adds an active scan check to find PHP object injection vulnerabilities.
-    + Installation Steps : 
-      - You can intsall it from burp extender
-    + How to Use :
-      - Once you've loaded the plugin , Run active scan
-   ---
   + NGINX alias traversal
  
     + Introduction : 
