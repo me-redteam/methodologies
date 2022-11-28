@@ -111,6 +111,18 @@ Once you have a patched APK ready, its time to install it.
 
 ![image](https://user-images.githubusercontent.com/48615614/204361051-461cec00-f1df-4557-b50f-3f790da45a6a.png)
 
+<br>
+
+### Getting started with android
+
+#### Unrooted Device:
+
+With objection installed, a patched APK installed to your Android device and with the device connected and authorized to your computer via USB you may start using objection:
+
+`objection explore`
+
+![image](https://user-images.githubusercontent.com/48615614/204361448-27e5cfa9-0586-4c6e-bb5d-9fae07fc02c3.png)
+
 
 
 
