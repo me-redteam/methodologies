@@ -124,6 +124,144 @@ With objection installed, a patched APK installed to your Android device and wit
 ![image](https://user-images.githubusercontent.com/48615614/204361448-27e5cfa9-0586-4c6e-bb5d-9fae07fc02c3.png)
 
 
+#### Rooted Device:
+
+With frida-server runnig on your rooted device: 
+Get your application process name:
+
+`frida-ps -Ua`
+
+![image](https://user-images.githubusercontent.com/48615614/204381931-e90fbd43-4133-4b9d-b191-1259cb6cfaf5.png)
+
+`objection --gadget "com.cohaesus.mafshare" explore`
+
+![image](https://user-images.githubusercontent.com/48615614/204382051-5dc62140-aedd-4ab5-afcf-035c500b3e4b.png)
+
+Android Commands: 
+
+Root:
+Disable:
+Attempts to disable root detection
+`android root disable`
+
+![image](https://user-images.githubusercontent.com/48615614/204382267-38a2766b-f3fc-4eb3-a897-e2bee61682b3.png)
+
+Simulate:
+Attempts to simulate a rooted android envirnment, by responding positively to common checks that are performed within the application.
+
+`android root simulate`
+
+![image](https://user-images.githubusercontent.com/48615614/204382412-e4076ba7-8943-477f-bf4a-300e2215b7a9.png)
+
+Hooking:
+List:
+Activities:
+you can list all the application registered activities using the following command:
+
+`android hooking list activities`
+
+![image](https://user-images.githubusercontent.com/48615614/204382662-faf6c930-ee8d-40d0-808c-51321b9eb4e7.png)
+
+Class Methods:
+you can list all the methods in a class using the following command:
+
+`android hooking list class_methods <ClassName>`
+
+![image](https://user-images.githubusercontent.com/48615614/204382739-228aa189-e423-4b6a-921a-92cf6eb6ae3d.png)
+
+
+Broadcast Receivers:
+you can list all the Broadcast Receivers using the following command:
+
+`android hooking list receivers`
+
+![image](https://user-images.githubusercontent.com/48615614/204382814-487af96d-7d82-406e-b2d1-6740090edce7.png)
+
+Services:
+you can list all the services using the following command:
+
+`android hooking list services`
+
+![image](https://user-images.githubusercontent.com/48615614/204382939-d2a06069-bebe-4f50-b6c2-1499f70df369.png)
+
+
+Set Return Value:
+
+You can sets a method return value to always be true/false, this could be useful to use in case of SSL binning or root detection.
+using the following command:
+`android hooking set return_value "<fully qualified class name>" "<method>" <true/false>`
+
+![image](https://user-images.githubusercontent.com/48615614/204383111-3917cd55-3a90-47d9-be3e-f10cb8141838.png)
+	
+Note: This only possible on methods returns a boolean. 
+
+Watch: 
+Class: 
+You can hook a class and watch for methods calling using the following command:
+`android hooking watch class <ClassName>`
+
+![image](https://user-images.githubusercontent.com/48615614/204383274-bbbc4b93-ef5d-4ad7-ba8c-abbed4db9c09.png)
+
+
+Class_methods:
+You can hook a specified method in a class and watch for calling  using the following command:
+`android hooking watch class <ClassName> <method>`
+
+![image](https://user-images.githubusercontent.com/48615614/204383367-cdaa4776-cd9c-44e3-9496-d7b78c0e916c.png)
+
+you can use the following options for both watch class and watch class_methods: 
+			
+	--dump-args: for dumbing the arguments value that the methods called with.
+	--dump-return: for dumbing the method return value 
+	--dump-backtrace: provide a full stack trace that lead to methods invocation will also be dumped. 
+
+Intent Launch activity:
+Launch an exported activity
+`android intent luanch_activity <activity name>`
+
+![image](https://user-images.githubusercontent.com/48615614/204383607-678e968e-92d4-4046-9abb-6dc428eedc89.png)
+
+- Keystore:
+
+List: list certificates or keys in the current application keystore
+`android keystore list`
+
+![image](https://user-images.githubusercontent.com/48615614/204383930-622799b5-23db-40d7-8ee0-df7d19335a15.png)
+
+Clear: clear current application keystore
+`android keystore clear`
+
+![image](https://user-images.githubusercontent.com/48615614/204384089-efa294b1-984f-4dd7-8706-1c25f8ca482b.png)
+
+Sslpinning disable: Attemps to disable sslpinnig using the following command: 
+`android sslpinning disable`
+
+![image](https://user-images.githubusercontent.com/48615614/204384165-20077c6a-e879-4315-b1ab-9fe2ddc189db.png)
+
+Shell_exec: could be used as a shell to execute command but use `su` command to gain root permission
+
+![image](https://user-images.githubusercontent.com/48615614/204384235-179422ac-f3b5-4afe-b9cf-f94b37ecde65.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
