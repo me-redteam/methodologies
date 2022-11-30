@@ -1,4 +1,4 @@
-### VOIP Penetration testing
+### VoIP Penetration testing
 
 Cyber-attacks pose numerous threats to VoIP telephone systems, such as the capture of inbound and outbound calls through network manipulation, recording or listening in on calls, gaining access to internal networks through the voice VLANS and use of the network to make outbound calls (toll fraud).
 
@@ -83,23 +83,3 @@ Why?
 	3. Phones easily associate to a logically separate VLAN
 	4. Saves on cabling costs
 	5. Allows simultaneous access for a PC
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
